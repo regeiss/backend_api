@@ -14,13 +14,6 @@ from rest_framework_simplejwt.views import (
     TokenVerifyView,
 )
 
-from rest_framework_simplejwt.views import (
-    TokenObtainPairView,
-    TokenRefreshView,
-    TokenVerifyView,
-)
-
-
 # API URLs
 api_v1_patterns = [
     # Authentication
@@ -52,7 +45,7 @@ urlpatterns = [
     path('api/auth/verify/', TokenVerifyView.as_view(), name='token_verify'),
     
     # Custom auth endpoints
-    path('api/auth/', include('authentication.urls')),
+    path('authentication/', include('authentication.urls')),
     path('cadastro/', include('apps.cadastro.urls')),
 ]
 

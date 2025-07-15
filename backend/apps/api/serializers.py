@@ -65,3 +65,47 @@ class LoginSerializer(serializers.Serializer):
             return attrs
         else:
             raise serializers.ValidationError('Username e password são obrigatórios.')
+
+# Serializers para as views da API
+class HealthCheckSerializer(serializers.Serializer):
+    """Serializer para resposta do health check"""
+    status = serializers.CharField(read_only=True)
+    message = serializers.CharField(read_only=True)
+    version = serializers.CharField(read_only=True)
+
+
+class EndpointInfoSerializer(serializers.Serializer):
+    """Serializer para informações de endpoints"""
+    login = serializers.CharField(read_only=True)
+    refresh = serializers.CharField(read_only=True)
+    verify = serializers.CharField(read_only=True)
+    register = serializers.CharField(read_only=True)
+
+
+class CadastroEndpointsSerializer(serializers.Serializer):
+    """Serializer para endpoints de cadastro"""
+    pessoas = serializers.CharField(read_only=True)
+    enderecos = serializers.CharField(read_only=True)
+
+
+class DocsEndpointsSerializer(serializers.Serializer):
+    """Serializer para endpoints de documentação"""
+    swagger = serializers.CharField(read_only=True)
+    redoc = serializers.CharField(read_only=True)
+    schema = serializers.CharField(read_only=True)
+
+
+class AllEndpointsSerializer(serializers.Serializer):
+    """Serializer para todos os endpoints"""
+    auth = EndpointInfoSerializer(read_only=True)
+    cadastro = CadastroEndpointsSerializer(read_only=True)
+    docs = DocsEndpointsSerializer(read_only=True)
+
+
+class ApiInfoSerializer(serializers.Serializer):
+    """Serializer para informações da API"""
+    name = serializers.CharField(read_only=True)
+    version = serializers.CharField(read_only=True)
+    description = serializers.CharField(read_only=True)
+    endpoints = AllEndpointsSerializer(read_only=True)
+    base_url = serializers.CharField(read_only=True)

@@ -1,4 +1,6 @@
+# backend/apps/cadastro/serializers.py
 from rest_framework import serializers
+from drf_spectacular.utils import extend_schema_field
 from .models import (
     Alojamento, CepAtingido, DemandaAmbiente, DemandaEducacao,
     DemandaHabitacao, DemandaInterna, DemandaSaude, Desaparecido,
@@ -135,7 +137,9 @@ class ResponsavelComMembrosSerializer(serializers.ModelSerializer):
         model = Responsavel
         fields = '__all__'
         
-    def get_total_membros(self, obj):
+    @extend_schema_field(serializers.IntegerField)
+    def get_total_membros(self, obj) -> int:
+        """Retorna o total de membros associados ao responsável"""
         return obj.membro_set.count()
 
 

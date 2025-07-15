@@ -1,3 +1,4 @@
+# backend/apps/api/views.py
 """
 Views gerais da API
 """
@@ -8,10 +9,17 @@ from rest_framework import status
 from django.contrib.auth.models import User
 from rest_framework import generics
 from drf_spectacular.utils import extend_schema
-from .serializers import UserSerializer, RegisterSerializer
+from .serializers import (
+    UserSerializer, RegisterSerializer, HealthCheckSerializer, 
+    ApiInfoSerializer
+)
 
 
-@extend_schema(summary="Health check da API")
+@extend_schema(
+    summary="Health check da API",
+    description="Endpoint para verificar se a API está funcionando",
+    responses={200: HealthCheckSerializer}
+)
 @api_view(['GET'])
 @permission_classes([AllowAny])
 def health_check(request):
@@ -23,7 +31,11 @@ def health_check(request):
     })
 
 
-@extend_schema(summary="Informações da API")
+@extend_schema(
+    summary="Informações da API",
+    description="Retorna informações sobre a API e endpoints disponíveis",
+    responses={200: ApiInfoSerializer}
+)
 @api_view(['GET'])
 @permission_classes([AllowAny])
 def api_info(request):
@@ -53,6 +65,12 @@ def api_info(request):
     })
 
 
+@extend_schema(
+    summary="Registro de usuário",
+    description="Endpoint para registro de novos usuários",
+    request=RegisterSerializer,
+    responses={201: UserSerializer}
+)
 class RegisterView(generics.CreateAPIView):
     """
     Endpoint para registro de novos usuários
@@ -62,6 +80,11 @@ class RegisterView(generics.CreateAPIView):
     permission_classes = [AllowAny]
 
 
+@extend_schema(
+    summary="Perfil do usuário",
+    description="Endpoint para visualizar e atualizar perfil do usuário",
+    responses={200: UserSerializer}
+)
 class ProfileView(generics.RetrieveUpdateAPIView):
     """
     Endpoint para visualizar e atualizar perfil do usuário

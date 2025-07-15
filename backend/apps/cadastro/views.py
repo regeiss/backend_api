@@ -2,6 +2,7 @@ from rest_framework import viewsets, status, filters
 from rest_framework.decorators import action
 from rest_framework.response import Response
 from django_filters.rest_framework import DjangoFilterBackend
+
 from django.db.models import Q
 from .models import (
     Alojamento, CepAtingido, DemandaAmbiente, DemandaEducacao,
@@ -224,3 +225,5 @@ class DesaparecidoViewSet(viewsets.ModelViewSet):
         recentes = self.queryset.filter(data_desaparecimento__gte=data_limite)
         serializer = self.get_serializer(recentes, many=True)
         return Response(serializer.data)
+    
+    

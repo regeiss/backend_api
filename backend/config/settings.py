@@ -158,8 +158,24 @@ REST_FRAMEWORK = {
     ],
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 20,
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+    'EXCEPTION_HANDLER': 'rest_framework.views.exception_handler',
+    'DEFAULT_THROTTLE_CLASSES': [
+        'rest_framework.throttling.UserRateThrottle',
+        'rest_framework.throttling.AnonRateThrottle',
+    ],
+    'DEFAULT_THROTTLE_RATES': {
+        'user': '1000/hour',
+        'anon': '100/hour',
+    },
+    'DATETIME_FORMAT': '%Y-%m-%d %H:%M:%S',
+    'DATE_FORMAT': '%Y-%m-%d',
+    'TIME_FORMAT': '%H:%M:%S',
+    'UNICODE_JSON': False,
+    'COMPACT_JSON': False,
+    'COERCE_DECIMAL_TO_STRING': True,
+    'UPLOADED_FILES_USE_URL': True,
 }
-
 # CORS Configuration
 # CORS_ALLOWED_ORIGINS = config(
 #     'CORS_ALLOWED_ORIGINS',
@@ -257,6 +273,62 @@ SPECTACULAR_SETTINGS = {
     'SWAGGER_UI_DIST': 'SIDECAR',
     'SWAGGER_UI_FAVICON_HREF': 'SIDECAR',
     'REDOC_DIST': 'SIDECAR',
+    'COMPONENT_SPLIT_REQUEST': True,
+    'SORT_OPERATIONS': False,
+    'DISABLE_ERRORS_AND_WARNINGS': False,
+    'SCHEMA_COERCE_PATH_PK': True,
+    'SCHEMA_COERCE_METHOD_NAMES': {
+        'retrieve': 'get',
+        'list': 'list',
+        'create': 'create',
+        'update': 'update',
+        'partial_update': 'partial_update',
+        'destroy': 'delete',
+    },
+    'DEFAULT_GENERATOR_CLASS': 'drf_spectacular.openapi.AutoSchema',
+    'POSTPROCESSING_HOOKS': [],
+    'PREPROCESSING_HOOKS': [],
+    'ENUM_NAME_OVERRIDES': {},
+    'GENERIC_ADDITIONAL_PROPERTIES': 'dict',
+    'CAMELIZE_NAMES': False,
+    'SCHEMA_PATH_PREFIX': '/api/',
+    'SCHEMA_PATH_PREFIX_TRIM': True,
+    'SCHEMA_PATH_PREFIX_INSERT': '',
+    'SERVE_AUTHENTICATION': None,
+    'SERVE_PERMISSIONS': ['rest_framework.permissions.AllowAny'],
+    'AUTHENTICATION_WHITELIST': [],
+    'CONTACT': {
+        'name': 'API Support',
+        'email': 'support@cadastrounificado.com',
+    },
+    'LICENSE': {
+        'name': 'MIT License',
+        'url': 'https://opensource.org/licenses/MIT',
+    },
+    'SERVERS': [
+        {
+            'url': 'http://10.13.65.37:8001',
+            'description': 'Development server',
+        },
+        {
+            'url': 'http://10.13.65.37:8081',
+            'description': 'Development server (Nginx)',
+        },
+    ],
+    'TAGS': [
+        {
+            'name': 'Authentication',
+            'description': 'Endpoints de autenticação e autorização',
+        },
+        {
+            'name': 'Cadastro',
+            'description': 'Endpoints de cadastro de responsáveis, membros e demandas',
+        },
+        {
+            'name': 'System',
+            'description': 'Endpoints do sistema (health check, info)',
+        },
+    ],
 }
 
 # Cache
