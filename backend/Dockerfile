@@ -23,7 +23,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Criar diretórios necessários
-RUN mkdir -p /app/static /app/media
+RUN mkdir -p /app/static /app/media /app/logs
 
 # Script de entrada
 COPY entrypoint.sh /entrypoint.sh

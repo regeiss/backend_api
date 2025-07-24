@@ -14,13 +14,16 @@ from rest_framework_simplejwt.views import (
     TokenVerifyView,
 )
 
-# API URLs
+# API URLs v1
 api_v1_patterns = [
-    # Authentication
-    path('auth/login/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
-    path('auth/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
-    path('auth/verify/', TokenVerifyView.as_view(), name='token_verify'),
-    
+    # JWT Authentication (endpoints padrão)
+    path('auth/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('auth/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+    path('auth/token/verify/', TokenVerifyView.as_view(), name='token_verify'),
+
+    # Custom Authentication (endpoints customizados)
+    path('auth/', include('authentication.urls')),
+
     # Apps
     path('', include('apps.api.urls')),
     path('cadastro/', include('apps.cadastro.urls')),
@@ -29,24 +32,18 @@ api_v1_patterns = [
 urlpatterns = [
     # Admin
     path('admin/', admin.site.urls),
-    
-    # API v1
-    path('api/v1/', include(api_v1_patterns)),
-    
-    # API Documentation
-    path('api/schema/', SpectacularAPIView.as_view(), name='schema'),
-    path('api/docs/', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),
-    path('api/redoc/', SpectacularRedocView.as_view(url_name='schema'), name='redoc'),
-    path('', lambda request: HttpResponse("Bem-vindo à API do Cadastro Unificado!"), name='home'),
 
-    # JWT Authentication
-    path('api/auth/login/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
-    path('api/auth/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
-    path('api/auth/verify/', TokenVerifyView.as_view(), name='token_verify'),
-    
-    # Custom auth endpoints
-    path('authentication/', include('authentication.urls')),
-    path('cadastro/', include('apps.cadastro.urls')),
+    # API v1 - TODAS as rotas da API devem usar este prefixo
+    path('api/v1/', include(api_v1_patterns)),
+
+    # API Documentation
+    path('api/v1/schema/', SpectacularAPIView.as_view(), name='schema'),
+    path('api/v1/docs/', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),
+    path('api/v1/redoc/', SpectacularRedocView.as_view(url_name='schema'), name='redoc'),
+
+    # Home
+    #path('', home_view, name='home'),
+    path('', lambda request: HttpResponse("API Cadastro Unificado - v1.0.0"), name='home'),
 ]
 
 # Serve media files in development

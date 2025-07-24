@@ -1,0 +1,3093 @@
+=== Corrigindo Problema do DRF Spectacular ===
+Parando containers...
+Removendo containers e imagens...
+Limpando cache...
+Deleted build cache objects:
+t9wt6h2sljbsu82ytc1ma3qmr
+wfqu6oxkuzp9e3qfnux9ybjq4
+hzyu0k7g5fzdoft8noq4vhnx1
+pvsm7l0rmcmyrlx3yqvl3l8q8
+vgzcqepc8944so6c0ec1fjtaa
+5advlsk4u6a8g2c21ydhy89xr
+iqmtwn6snpqp89tbvti2x5zwe
+qllqcv1evvddl45jcthkst0rs
+ygjm56zhepr86n1fj7byiaed8
+u6qncgy8oqsuhl593eq70salr
+an8os4fzskgpof6ny1sk9eul2
+dddhhhx1gtbboy3t21proxkig
+
+Total reclaimed space: 387.3MB
+Reconstruindo imagens com requirements.txt atualizado...
+#0 building with "default" instance using docker driver
+
+#1 [backend internal] load build definition from Dockerfile
+#1 transferring dockerfile: 898B done
+#1 DONE 0.0s
+
+#2 [backend internal] load metadata for docker.io/library/python:3.11-slim
+#2 DONE 1.1s
+
+#3 [backend internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [backend  1/11] FROM docker.io/library/python:3.11-slim@sha256:139020233cc412efe4c8135b0efe1c7569dc8b28ddd88bddb109b764f8977e30
+#4 DONE 0.0s
+
+#5 [backend  2/11] WORKDIR /app
+#5 CACHED
+
+#6 [backend internal] load build context
+#6 transferring context: 91.05kB done
+#6 DONE 0.1s
+
+#7 [backend  3/11] RUN apt-get update     && apt-get install -y --no-install-recommends         postgresql-client         build-essential         libpq-dev         gcc         netcat-traditional     && rm -rf /var/lib/apt/lists/*
+#7 0.619 Get:1 http://deb.debian.org/debian bookworm InRelease [151 kB]
+#7 0.629 Get:2 http://deb.debian.org/debian bookworm-updates InRelease [55.4 kB]
+#7 0.630 Get:3 http://deb.debian.org/debian-security bookworm-security InRelease [48.0 kB]
+#7 0.691 Get:4 http://deb.debian.org/debian bookworm/main arm64 Packages [8693 kB]
+#7 0.769 Get:5 http://deb.debian.org/debian bookworm-updates/main arm64 Packages [756 B]
+#7 0.803 Get:6 http://deb.debian.org/debian-security bookworm-security/main arm64 Packages [268 kB]
+#7 1.602 Fetched 9216 kB in 1s (6927 kB/s)
+#7 1.602 Reading package lists...
+#7 2.172 Reading package lists...
+#7 2.741 Building dependency tree...
+#7 2.909 Reading state information...
+#7 3.189 The following additional packages will be installed:
+#7 3.189   binutils binutils-aarch64-linux-gnu binutils-common bzip2 cpp cpp-12
+#7 3.190   dpkg-dev g++ g++-12 gcc-12 libasan8 libatomic1 libbinutils libc-dev-bin
+#7 3.191   libc6-dev libcc1-0 libcrypt-dev libctf-nobfd0 libctf0 libdpkg-perl
+#7 3.191   libgcc-12-dev libgdbm-compat4 libgomp1 libgprofng0 libhwasan0 libisl23
+#7 3.192   libitm1 libjansson4 libldap-2.5-0 liblsan0 libmpc3 libmpfr6 libnsl-dev
+#7 3.192   libperl5.36 libpq5 libsasl2-2 libsasl2-modules-db libssl-dev
+#7 3.193   libstdc++-12-dev libtirpc-dev libtsan2 libubsan1 linux-libc-dev make patch
+#7 3.194   perl perl-modules-5.36 postgresql-client-15 postgresql-client-common
+#7 3.194   rpcsvc-proto sensible-utils xz-utils
+#7 3.197 Suggested packages:
+#7 3.197   binutils-doc bzip2-doc cpp-doc gcc-12-locales cpp-12-doc debian-keyring
+#7 3.197   gcc-12-doc gcc-multilib manpages-dev autoconf automake libtool flex bison
+#7 3.197   gdb gcc-doc glibc-doc gnupg | sq | sqop | pgpainless-cli git bzr
+#7 3.198   postgresql-doc-15 libssl-doc libstdc++-12-doc make-doc ed diffutils-doc
+#7 3.198   perl-doc libterm-readline-gnu-perl | libterm-readline-perl-perl
+#7 3.198   libtap-harness-archive-perl postgresql-15
+#7 3.198 Recommended packages:
+#7 3.198   fakeroot gnupg | sq | sqop | pgpainless-cli libalgorithm-merge-perl manpages
+#7 3.199   manpages-dev libc-devtools libfile-fcntllock-perl liblocale-gettext-perl
+#7 3.199   libldap-common libsasl2-modules
+#7 3.471 The following NEW packages will be installed:
+#7 3.472   binutils binutils-aarch64-linux-gnu binutils-common build-essential bzip2
+#7 3.472   cpp cpp-12 dpkg-dev g++ g++-12 gcc gcc-12 libasan8 libatomic1 libbinutils
+#7 3.473   libc-dev-bin libc6-dev libcc1-0 libcrypt-dev libctf-nobfd0 libctf0
+#7 3.473   libdpkg-perl libgcc-12-dev libgdbm-compat4 libgomp1 libgprofng0 libhwasan0
+#7 3.473   libisl23 libitm1 libjansson4 libldap-2.5-0 liblsan0 libmpc3 libmpfr6
+#7 3.474   libnsl-dev libperl5.36 libpq-dev libpq5 libsasl2-2 libsasl2-modules-db
+#7 3.475   libssl-dev libstdc++-12-dev libtirpc-dev libtsan2 libubsan1 linux-libc-dev
+#7 3.475   make netcat-traditional patch perl perl-modules-5.36 postgresql-client
+#7 3.476   postgresql-client-15 postgresql-client-common rpcsvc-proto sensible-utils
+#7 3.476   xz-utils
+#7 3.507 0 upgraded, 57 newly installed, 0 to remove and 1 not upgraded.
+#7 3.507 Need to get 70.7 MB of archives.
+#7 3.507 After this operation, 322 MB of additional disk space will be used.
+#7 3.507 Get:1 http://deb.debian.org/debian bookworm/main arm64 perl-modules-5.36 all 5.36.0-7+deb12u2 [2815 kB]
+#7 3.526 Get:2 http://deb.debian.org/debian bookworm/main arm64 libgdbm-compat4 arm64 1.23-3 [48.0 kB]
+#7 3.529 Get:3 http://deb.debian.org/debian bookworm/main arm64 libperl5.36 arm64 5.36.0-7+deb12u2 [4027 kB]
+#7 3.558 Get:4 http://deb.debian.org/debian bookworm/main arm64 perl arm64 5.36.0-7+deb12u2 [239 kB]
+#7 3.561 Get:5 http://deb.debian.org/debian bookworm/main arm64 sensible-utils all 0.0.17+nmu1 [19.0 kB]
+#7 3.562 Get:6 http://deb.debian.org/debian bookworm/main arm64 bzip2 arm64 1.0.8-5+b1 [48.9 kB]
+#7 3.563 Get:7 http://deb.debian.org/debian bookworm/main arm64 netcat-traditional arm64 1.10-47 [66.9 kB]
+#7 3.564 Get:8 http://deb.debian.org/debian bookworm/main arm64 xz-utils arm64 5.4.1-1 [469 kB]
+#7 3.569 Get:9 http://deb.debian.org/debian bookworm/main arm64 binutils-common arm64 2.40-2 [2487 kB]
+#7 3.585 Get:10 http://deb.debian.org/debian bookworm/main arm64 libbinutils arm64 2.40-2 [645 kB]
+#7 3.590 Get:11 http://deb.debian.org/debian bookworm/main arm64 libctf-nobfd0 arm64 2.40-2 [144 kB]
+#7 3.592 Get:12 http://deb.debian.org/debian bookworm/main arm64 libctf0 arm64 2.40-2 [79.2 kB]
+#7 3.594 Get:13 http://deb.debian.org/debian bookworm/main arm64 libgprofng0 arm64 2.40-2 [680 kB]
+#7 3.599 Get:14 http://deb.debian.org/debian bookworm/main arm64 libjansson4 arm64 2.14-2 [40.2 kB]
+#7 3.600 Get:15 http://deb.debian.org/debian bookworm/main arm64 binutils-aarch64-linux-gnu arm64 2.40-2 [2637 kB]
+#7 3.618 Get:16 http://deb.debian.org/debian bookworm/main arm64 binutils arm64 2.40-2 [64.9 kB]
+#7 3.619 Get:17 http://deb.debian.org/debian bookworm/main arm64 libc-dev-bin arm64 2.36-9+deb12u10 [46.2 kB]
+#7 3.621 Get:18 http://deb.debian.org/debian-security bookworm-security/main arm64 linux-libc-dev arm64 6.1.140-1 [2120 kB]
+#7 3.630 Get:19 http://deb.debian.org/debian bookworm/main arm64 libcrypt-dev arm64 1:4.4.33-2 [121 kB]
+#7 3.632 Get:20 http://deb.debian.org/debian bookworm/main arm64 libtirpc-dev arm64 1.3.3+ds-1 [194 kB]
+#7 3.634 Get:21 http://deb.debian.org/debian bookworm/main arm64 libnsl-dev arm64 1.3.0-2 [66.1 kB]
+#7 3.636 Get:22 http://deb.debian.org/debian bookworm/main arm64 rpcsvc-proto arm64 1.4.3-1 [59.7 kB]
+#7 3.637 Get:23 http://deb.debian.org/debian bookworm/main arm64 libc6-dev arm64 2.36-9+deb12u10 [1431 kB]
+#7 3.646 Get:24 http://deb.debian.org/debian bookworm/main arm64 libisl23 arm64 0.25-1.1 [610 kB]
+#7 3.651 Get:25 http://deb.debian.org/debian bookworm/main arm64 libmpfr6 arm64 4.2.0-1 [600 kB]
+#7 3.655 Get:26 http://deb.debian.org/debian bookworm/main arm64 libmpc3 arm64 1.3.1-1 [49.2 kB]
+#7 3.656 Get:27 http://deb.debian.org/debian bookworm/main arm64 cpp-12 arm64 12.2.0-14+deb12u1 [8228 kB]
+#7 3.703 Get:28 http://deb.debian.org/debian bookworm/main arm64 cpp arm64 4:12.2.0-3 [6832 B]
+#7 3.704 Get:29 http://deb.debian.org/debian bookworm/main arm64 libcc1-0 arm64 12.2.0-14+deb12u1 [37.7 kB]
+#7 3.705 Get:30 http://deb.debian.org/debian bookworm/main arm64 libgomp1 arm64 12.2.0-14+deb12u1 [104 kB]
+#7 3.706 Get:31 http://deb.debian.org/debian bookworm/main arm64 libitm1 arm64 12.2.0-14+deb12u1 [24.0 kB]
+#7 3.707 Get:32 http://deb.debian.org/debian bookworm/main arm64 libatomic1 arm64 12.2.0-14+deb12u1 [9568 B]
+#7 3.707 Get:33 http://deb.debian.org/debian bookworm/main arm64 libasan8 arm64 12.2.0-14+deb12u1 [2096 kB]
+#7 3.719 Get:34 http://deb.debian.org/debian bookworm/main arm64 liblsan0 arm64 12.2.0-14+deb12u1 [926 kB]
+#7 3.724 Get:35 http://deb.debian.org/debian bookworm/main arm64 libtsan2 arm64 12.2.0-14+deb12u1 [2178 kB]
+#7 3.737 Get:36 http://deb.debian.org/debian bookworm/main arm64 libubsan1 arm64 12.2.0-14+deb12u1 [862 kB]
+#7 3.742 Get:37 http://deb.debian.org/debian bookworm/main arm64 libhwasan0 arm64 12.2.0-14+deb12u1 [999 kB]
+#7 3.748 Get:38 http://deb.debian.org/debian bookworm/main arm64 libgcc-12-dev arm64 12.2.0-14+deb12u1 [956 kB]
+#7 3.753 Get:39 http://deb.debian.org/debian bookworm/main arm64 gcc-12 arm64 12.2.0-14+deb12u1 [16.3 MB]
+#7 3.829 Get:40 http://deb.debian.org/debian bookworm/main arm64 gcc arm64 4:12.2.0-3 [5244 B]
+#7 3.830 Get:41 http://deb.debian.org/debian bookworm/main arm64 libstdc++-12-dev arm64 12.2.0-14+deb12u1 [2007 kB]
+#7 3.838 Get:42 http://deb.debian.org/debian bookworm/main arm64 g++-12 arm64 12.2.0-14+deb12u1 [9072 kB]
+#7 3.882 Get:43 http://deb.debian.org/debian bookworm/main arm64 g++ arm64 4:12.2.0-3 [1336 B]
+#7 3.882 Get:44 http://deb.debian.org/debian bookworm/main arm64 make arm64 4.3-4.1 [391 kB]
+#7 3.884 Get:45 http://deb.debian.org/debian bookworm/main arm64 libdpkg-perl all 1.21.22 [603 kB]
+#7 3.888 Get:46 http://deb.debian.org/debian bookworm/main arm64 patch arm64 2.7.6-7 [121 kB]
+#7 3.888 Get:47 http://deb.debian.org/debian bookworm/main arm64 dpkg-dev all 1.21.22 [1353 kB]
+#7 3.895 Get:48 http://deb.debian.org/debian bookworm/main arm64 build-essential arm64 12.9 [7704 B]
+#7 3.895 Get:49 http://deb.debian.org/debian bookworm/main arm64 libsasl2-modules-db arm64 2.1.28+dfsg-10 [20.8 kB]
+#7 3.896 Get:50 http://deb.debian.org/debian bookworm/main arm64 libsasl2-2 arm64 2.1.28+dfsg-10 [58.0 kB]
+#7 3.897 Get:51 http://deb.debian.org/debian bookworm/main arm64 libldap-2.5-0 arm64 2.5.13+dfsg-5 [171 kB]
+#7 3.898 Get:52 http://deb.debian.org/debian bookworm/main arm64 libpq5 arm64 15.13-0+deb12u1 [184 kB]
+#7 3.899 Get:53 http://deb.debian.org/debian bookworm/main arm64 libssl-dev arm64 3.0.16-1~deb12u1 [2310 kB]
+#7 3.908 Get:54 http://deb.debian.org/debian bookworm/main arm64 libpq-dev arm64 15.13-0+deb12u1 [143 kB]
+#7 3.909 Get:55 http://deb.debian.org/debian bookworm/main arm64 postgresql-client-common all 248 [35.1 kB]
+#7 3.909 Get:56 http://deb.debian.org/debian bookworm/main arm64 postgresql-client-15 arm64 15.13-0+deb12u1 [1675 kB]
+#7 3.915 Get:57 http://deb.debian.org/debian bookworm/main arm64 postgresql-client all 15+248 [10.1 kB]
+#7 4.055 debconf: delaying package configuration, since apt-utils is not installed
+#7 4.101 Fetched 70.7 MB in 0s (166 MB/s)
+#7 4.123 Selecting previously unselected package perl-modules-5.36.
+#7 4.125 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 6682 files and directories currently installed.)
+#7 4.139 Preparing to unpack .../00-perl-modules-5.36_5.36.0-7+deb12u2_all.deb ...
+#7 4.144 Unpacking perl-modules-5.36 (5.36.0-7+deb12u2) ...
+#7 4.580 Selecting previously unselected package libgdbm-compat4:arm64.
+#7 4.581 Preparing to unpack .../01-libgdbm-compat4_1.23-3_arm64.deb ...
+#7 4.589 Unpacking libgdbm-compat4:arm64 (1.23-3) ...
+#7 4.624 Selecting previously unselected package libperl5.36:arm64.
+#7 4.626 Preparing to unpack .../02-libperl5.36_5.36.0-7+deb12u2_arm64.deb ...
+#7 4.630 Unpacking libperl5.36:arm64 (5.36.0-7+deb12u2) ...
+#7 4.969 Selecting previously unselected package perl.
+#7 4.971 Preparing to unpack .../03-perl_5.36.0-7+deb12u2_arm64.deb ...
+#7 4.981 Unpacking perl (5.36.0-7+deb12u2) ...
+#7 5.023 Selecting previously unselected package sensible-utils.
+#7 5.023 Preparing to unpack .../04-sensible-utils_0.0.17+nmu1_all.deb ...
+#7 5.027 Unpacking sensible-utils (0.0.17+nmu1) ...
+#7 5.056 Selecting previously unselected package bzip2.
+#7 5.058 Preparing to unpack .../05-bzip2_1.0.8-5+b1_arm64.deb ...
+#7 5.063 Unpacking bzip2 (1.0.8-5+b1) ...
+#7 5.100 Selecting previously unselected package netcat-traditional.
+#7 5.100 Preparing to unpack .../06-netcat-traditional_1.10-47_arm64.deb ...
+#7 5.104 Unpacking netcat-traditional (1.10-47) ...
+#7 5.138 Selecting previously unselected package xz-utils.
+#7 5.140 Preparing to unpack .../07-xz-utils_5.4.1-1_arm64.deb ...
+#7 5.143 Unpacking xz-utils (5.4.1-1) ...
+#7 5.200 Selecting previously unselected package binutils-common:arm64.
+#7 5.202 Preparing to unpack .../08-binutils-common_2.40-2_arm64.deb ...
+#7 5.206 Unpacking binutils-common:arm64 (2.40-2) ...
+#7 5.398 Selecting previously unselected package libbinutils:arm64.
+#7 5.400 Preparing to unpack .../09-libbinutils_2.40-2_arm64.deb ...
+#7 5.405 Unpacking libbinutils:arm64 (2.40-2) ...
+#7 5.480 Selecting previously unselected package libctf-nobfd0:arm64.
+#7 5.481 Preparing to unpack .../10-libctf-nobfd0_2.40-2_arm64.deb ...
+#7 5.485 Unpacking libctf-nobfd0:arm64 (2.40-2) ...
+#7 5.528 Selecting previously unselected package libctf0:arm64.
+#7 5.528 Preparing to unpack .../11-libctf0_2.40-2_arm64.deb ...
+#7 5.531 Unpacking libctf0:arm64 (2.40-2) ...
+#7 5.571 Selecting previously unselected package libgprofng0:arm64.
+#7 5.573 Preparing to unpack .../12-libgprofng0_2.40-2_arm64.deb ...
+#7 5.578 Unpacking libgprofng0:arm64 (2.40-2) ...
+#7 5.655 Selecting previously unselected package libjansson4:arm64.
+#7 5.657 Preparing to unpack .../13-libjansson4_2.14-2_arm64.deb ...
+#7 5.661 Unpacking libjansson4:arm64 (2.14-2) ...
+#7 5.691 Selecting previously unselected package binutils-aarch64-linux-gnu.
+#7 5.693 Preparing to unpack .../14-binutils-aarch64-linux-gnu_2.40-2_arm64.deb ...
+#7 5.697 Unpacking binutils-aarch64-linux-gnu (2.40-2) ...
+#7 5.962 Selecting previously unselected package binutils.
+#7 5.965 Preparing to unpack .../15-binutils_2.40-2_arm64.deb ...
+#7 5.968 Unpacking binutils (2.40-2) ...
+#7 6.001 Selecting previously unselected package libc-dev-bin.
+#7 6.003 Preparing to unpack .../16-libc-dev-bin_2.36-9+deb12u10_arm64.deb ...
+#7 6.007 Unpacking libc-dev-bin (2.36-9+deb12u10) ...
+#7 6.038 Selecting previously unselected package linux-libc-dev:arm64.
+#7 6.041 Preparing to unpack .../17-linux-libc-dev_6.1.140-1_arm64.deb ...
+#7 6.044 Unpacking linux-libc-dev:arm64 (6.1.140-1) ...
+#7 6.234 Selecting previously unselected package libcrypt-dev:arm64.
+#7 6.237 Preparing to unpack .../18-libcrypt-dev_1%3a4.4.33-2_arm64.deb ...
+#7 6.245 Unpacking libcrypt-dev:arm64 (1:4.4.33-2) ...
+#7 6.279 Selecting previously unselected package libtirpc-dev:arm64.
+#7 6.282 Preparing to unpack .../19-libtirpc-dev_1.3.3+ds-1_arm64.deb ...
+#7 6.285 Unpacking libtirpc-dev:arm64 (1.3.3+ds-1) ...
+#7 6.328 Selecting previously unselected package libnsl-dev:arm64.
+#7 6.328 Preparing to unpack .../20-libnsl-dev_1.3.0-2_arm64.deb ...
+#7 6.332 Unpacking libnsl-dev:arm64 (1.3.0-2) ...
+#7 6.364 Selecting previously unselected package rpcsvc-proto.
+#7 6.367 Preparing to unpack .../21-rpcsvc-proto_1.4.3-1_arm64.deb ...
+#7 6.370 Unpacking rpcsvc-proto (1.4.3-1) ...
+#7 6.408 Selecting previously unselected package libc6-dev:arm64.
+#7 6.408 Preparing to unpack .../22-libc6-dev_2.36-9+deb12u10_arm64.deb ...
+#7 6.412 Unpacking libc6-dev:arm64 (2.36-9+deb12u10) ...
+#7 6.550 Selecting previously unselected package libisl23:arm64.
+#7 6.553 Preparing to unpack .../23-libisl23_0.25-1.1_arm64.deb ...
+#7 6.557 Unpacking libisl23:arm64 (0.25-1.1) ...
+#7 6.629 Selecting previously unselected package libmpfr6:arm64.
+#7 6.632 Preparing to unpack .../24-libmpfr6_4.2.0-1_arm64.deb ...
+#7 6.636 Unpacking libmpfr6:arm64 (4.2.0-1) ...
+#7 6.686 Selecting previously unselected package libmpc3:arm64.
+#7 6.689 Preparing to unpack .../25-libmpc3_1.3.1-1_arm64.deb ...
+#7 6.692 Unpacking libmpc3:arm64 (1.3.1-1) ...
+#7 6.723 Selecting previously unselected package cpp-12.
+#7 6.725 Preparing to unpack .../26-cpp-12_12.2.0-14+deb12u1_arm64.deb ...
+#7 6.729 Unpacking cpp-12 (12.2.0-14+deb12u1) ...
+#7 7.253 Selecting previously unselected package cpp.
+#7 7.255 Preparing to unpack .../27-cpp_4%3a12.2.0-3_arm64.deb ...
+#7 7.259 Unpacking cpp (4:12.2.0-3) ...
+#7 7.291 Selecting previously unselected package libcc1-0:arm64.
+#7 7.294 Preparing to unpack .../28-libcc1-0_12.2.0-14+deb12u1_arm64.deb ...
+#7 7.298 Unpacking libcc1-0:arm64 (12.2.0-14+deb12u1) ...
+#7 7.335 Selecting previously unselected package libgomp1:arm64.
+#7 7.338 Preparing to unpack .../29-libgomp1_12.2.0-14+deb12u1_arm64.deb ...
+#7 7.342 Unpacking libgomp1:arm64 (12.2.0-14+deb12u1) ...
+#7 7.384 Selecting previously unselected package libitm1:arm64.
+#7 7.386 Preparing to unpack .../30-libitm1_12.2.0-14+deb12u1_arm64.deb ...
+#7 7.390 Unpacking libitm1:arm64 (12.2.0-14+deb12u1) ...
+#7 7.428 Selecting previously unselected package libatomic1:arm64.
+#7 7.428 Preparing to unpack .../31-libatomic1_12.2.0-14+deb12u1_arm64.deb ...
+#7 7.432 Unpacking libatomic1:arm64 (12.2.0-14+deb12u1) ...
+#7 7.468 Selecting previously unselected package libasan8:arm64.
+#7 7.468 Preparing to unpack .../32-libasan8_12.2.0-14+deb12u1_arm64.deb ...
+#7 7.471 Unpacking libasan8:arm64 (12.2.0-14+deb12u1) ...
+#7 7.639 Selecting previously unselected package liblsan0:arm64.
+#7 7.639 Preparing to unpack .../33-liblsan0_12.2.0-14+deb12u1_arm64.deb ...
+#7 7.643 Unpacking liblsan0:arm64 (12.2.0-14+deb12u1) ...
+#7 7.730 Selecting previously unselected package libtsan2:arm64.
+#7 7.733 Preparing to unpack .../34-libtsan2_12.2.0-14+deb12u1_arm64.deb ...
+#7 7.737 Unpacking libtsan2:arm64 (12.2.0-14+deb12u1) ...
+#7 7.913 Selecting previously unselected package libubsan1:arm64.
+#7 7.916 Preparing to unpack .../35-libubsan1_12.2.0-14+deb12u1_arm64.deb ...
+#7 7.919 Unpacking libubsan1:arm64 (12.2.0-14+deb12u1) ...
+#7 8.003 Selecting previously unselected package libhwasan0:arm64.
+#7 8.005 Preparing to unpack .../36-libhwasan0_12.2.0-14+deb12u1_arm64.deb ...
+#7 8.009 Unpacking libhwasan0:arm64 (12.2.0-14+deb12u1) ...
+#7 8.096 Selecting previously unselected package libgcc-12-dev:arm64.
+#7 8.100 Preparing to unpack .../37-libgcc-12-dev_12.2.0-14+deb12u1_arm64.deb ...
+#7 8.103 Unpacking libgcc-12-dev:arm64 (12.2.0-14+deb12u1) ...
+#7 8.212 Selecting previously unselected package gcc-12.
+#7 8.215 Preparing to unpack .../38-gcc-12_12.2.0-14+deb12u1_arm64.deb ...
+#7 8.218 Unpacking gcc-12 (12.2.0-14+deb12u1) ...
+#7 8.927 Selecting previously unselected package gcc.
+#7 8.929 Preparing to unpack .../39-gcc_4%3a12.2.0-3_arm64.deb ...
+#7 8.933 Unpacking gcc (4:12.2.0-3) ...
+#7 8.965 Selecting previously unselected package libstdc++-12-dev:arm64.
+#7 8.968 Preparing to unpack .../40-libstdc++-12-dev_12.2.0-14+deb12u1_arm64.deb ...
+#7 8.971 Unpacking libstdc++-12-dev:arm64 (12.2.0-14+deb12u1) ...
+#7 9.187 Selecting previously unselected package g++-12.
+#7 9.190 Preparing to unpack .../41-g++-12_12.2.0-14+deb12u1_arm64.deb ...
+#7 9.193 Unpacking g++-12 (12.2.0-14+deb12u1) ...
+#7 9.704 Selecting previously unselected package g++.
+#7 9.706 Preparing to unpack .../42-g++_4%3a12.2.0-3_arm64.deb ...
+#7 9.711 Unpacking g++ (4:12.2.0-3) ...
+#7 9.740 Selecting previously unselected package make.
+#7 9.740 Preparing to unpack .../43-make_4.3-4.1_arm64.deb ...
+#7 9.744 Unpacking make (4.3-4.1) ...
+#7 9.797 Selecting previously unselected package libdpkg-perl.
+#7 9.800 Preparing to unpack .../44-libdpkg-perl_1.21.22_all.deb ...
+#7 9.803 Unpacking libdpkg-perl (1.21.22) ...
+#7 9.872 Selecting previously unselected package patch.
+#7 9.875 Preparing to unpack .../45-patch_2.7.6-7_arm64.deb ...
+#7 9.879 Unpacking patch (2.7.6-7) ...
+#7 9.914 Selecting previously unselected package dpkg-dev.
+#7 9.917 Preparing to unpack .../46-dpkg-dev_1.21.22_all.deb ...
+#7 9.921 Unpacking dpkg-dev (1.21.22) ...
+#7 10.02 Selecting previously unselected package build-essential.
+#7 10.02 Preparing to unpack .../47-build-essential_12.9_arm64.deb ...
+#7 10.02 Unpacking build-essential (12.9) ...
+#7 10.05 Selecting previously unselected package libsasl2-modules-db:arm64.
+#7 10.05 Preparing to unpack .../48-libsasl2-modules-db_2.1.28+dfsg-10_arm64.deb ...
+#7 10.06 Unpacking libsasl2-modules-db:arm64 (2.1.28+dfsg-10) ...
+#7 10.09 Selecting previously unselected package libsasl2-2:arm64.
+#7 10.09 Preparing to unpack .../49-libsasl2-2_2.1.28+dfsg-10_arm64.deb ...
+#7 10.10 Unpacking libsasl2-2:arm64 (2.1.28+dfsg-10) ...
+#7 10.13 Selecting previously unselected package libldap-2.5-0:arm64.
+#7 10.14 Preparing to unpack .../50-libldap-2.5-0_2.5.13+dfsg-5_arm64.deb ...
+#7 10.14 Unpacking libldap-2.5-0:arm64 (2.5.13+dfsg-5) ...
+#7 10.18 Selecting previously unselected package libpq5:arm64.
+#7 10.18 Preparing to unpack .../51-libpq5_15.13-0+deb12u1_arm64.deb ...
+#7 10.19 Unpacking libpq5:arm64 (15.13-0+deb12u1) ...
+#7 10.23 Selecting previously unselected package libssl-dev:arm64.
+#7 10.23 Preparing to unpack .../52-libssl-dev_3.0.16-1~deb12u1_arm64.deb ...
+#7 10.23 Unpacking libssl-dev:arm64 (3.0.16-1~deb12u1) ...
+#7 10.40 Selecting previously unselected package libpq-dev.
+#7 10.40 Preparing to unpack .../53-libpq-dev_15.13-0+deb12u1_arm64.deb ...
+#7 10.41 Unpacking libpq-dev (15.13-0+deb12u1) ...
+#7 10.45 Selecting previously unselected package postgresql-client-common.
+#7 10.45 Preparing to unpack .../54-postgresql-client-common_248_all.deb ...
+#7 10.46 Unpacking postgresql-client-common (248) ...
+#7 10.49 Selecting previously unselected package postgresql-client-15.
+#7 10.49 Preparing to unpack .../55-postgresql-client-15_15.13-0+deb12u1_arm64.deb ...
+#7 10.50 Unpacking postgresql-client-15 (15.13-0+deb12u1) ...
+#7 10.64 Selecting previously unselected package postgresql-client.
+#7 10.64 Preparing to unpack .../56-postgresql-client_15+248_all.deb ...
+#7 10.64 Unpacking postgresql-client (15+248) ...
+#7 10.69 Setting up netcat-traditional (1.10-47) ...
+#7 10.70 update-alternatives: using /bin/nc.traditional to provide /bin/nc (nc) in auto mode
+#7 10.70 update-alternatives: warning: skip creation of /usr/share/man/man1/nc.1.gz because associated file /usr/share/man/man1/nc.traditional.1.gz (of link group nc) doesn't exist
+#7 10.70 update-alternatives: warning: skip creation of /usr/share/man/man1/netcat.1.gz because associated file /usr/share/man/man1/nc.traditional.1.gz (of link group nc) doesn't exist
+#7 10.71 Setting up binutils-common:arm64 (2.40-2) ...
+#7 10.72 Setting up linux-libc-dev:arm64 (6.1.140-1) ...
+#7 10.73 Setting up libctf-nobfd0:arm64 (2.40-2) ...
+#7 10.74 Setting up libgomp1:arm64 (12.2.0-14+deb12u1) ...
+#7 10.75 Setting up bzip2 (1.0.8-5+b1) ...
+#7 10.77 Setting up libjansson4:arm64 (2.14-2) ...
+#7 10.78 Setting up libsasl2-modules-db:arm64 (2.1.28+dfsg-10) ...
+#7 10.79 Setting up perl-modules-5.36 (5.36.0-7+deb12u2) ...
+#7 10.80 Setting up libtirpc-dev:arm64 (1.3.3+ds-1) ...
+#7 10.81 Setting up rpcsvc-proto (1.4.3-1) ...
+#7 10.82 Setting up make (4.3-4.1) ...
+#7 10.83 Setting up libmpfr6:arm64 (4.2.0-1) ...
+#7 10.84 Setting up xz-utils (5.4.1-1) ...
+#7 10.93 update-alternatives: using /usr/bin/xz to provide /usr/bin/lzma (lzma) in auto mode
+#7 10.93 update-alternatives: warning: skip creation of /usr/share/man/man1/lzma.1.gz because associated file /usr/share/man/man1/xz.1.gz (of link group lzma) doesn't exist
+#7 10.93 update-alternatives: warning: skip creation of /usr/share/man/man1/unlzma.1.gz because associated file /usr/share/man/man1/unxz.1.gz (of link group lzma) doesn't exist
+#7 10.93 update-alternatives: warning: skip creation of /usr/share/man/man1/lzcat.1.gz because associated file /usr/share/man/man1/xzcat.1.gz (of link group lzma) doesn't exist
+#7 10.93 update-alternatives: warning: skip creation of /usr/share/man/man1/lzmore.1.gz because associated file /usr/share/man/man1/xzmore.1.gz (of link group lzma) doesn't exist
+#7 10.93 update-alternatives: warning: skip creation of /usr/share/man/man1/lzless.1.gz because associated file /usr/share/man/man1/xzless.1.gz (of link group lzma) doesn't exist
+#7 10.93 update-alternatives: warning: skip creation of /usr/share/man/man1/lzdiff.1.gz because associated file /usr/share/man/man1/xzdiff.1.gz (of link group lzma) doesn't exist
+#7 10.93 update-alternatives: warning: skip creation of /usr/share/man/man1/lzcmp.1.gz because associated file /usr/share/man/man1/xzcmp.1.gz (of link group lzma) doesn't exist
+#7 10.93 update-alternatives: warning: skip creation of /usr/share/man/man1/lzgrep.1.gz because associated file /usr/share/man/man1/xzgrep.1.gz (of link group lzma) doesn't exist
+#7 10.93 update-alternatives: warning: skip creation of /usr/share/man/man1/lzegrep.1.gz because associated file /usr/share/man/man1/xzegrep.1.gz (of link group lzma) doesn't exist
+#7 10.93 update-alternatives: warning: skip creation of /usr/share/man/man1/lzfgrep.1.gz because associated file /usr/share/man/man1/xzfgrep.1.gz (of link group lzma) doesn't exist
+#7 11.05 Setting up libssl-dev:arm64 (3.0.16-1~deb12u1) ...
+#7 11.13 Setting up libmpc3:arm64 (1.3.1-1) ...
+#7 11.22 Setting up libatomic1:arm64 (12.2.0-14+deb12u1) ...
+#7 11.32 Setting up patch (2.7.6-7) ...
+#7 11.33 Setting up libgdbm-compat4:arm64 (1.23-3) ...
+#7 11.34 Setting up libsasl2-2:arm64 (2.1.28+dfsg-10) ...
+#7 11.35 Setting up libubsan1:arm64 (12.2.0-14+deb12u1) ...
+#7 11.37 Setting up libnsl-dev:arm64 (1.3.0-2) ...
+#7 11.38 Setting up sensible-utils (0.0.17+nmu1) ...
+#7 11.39 Setting up libhwasan0:arm64 (12.2.0-14+deb12u1) ...
+#7 11.40 Setting up libcrypt-dev:arm64 (1:4.4.33-2) ...
+#7 11.41 Setting up libasan8:arm64 (12.2.0-14+deb12u1) ...
+#7 11.42 Setting up libtsan2:arm64 (12.2.0-14+deb12u1) ...
+#7 11.43 Setting up libbinutils:arm64 (2.40-2) ...
+#7 11.45 Setting up libisl23:arm64 (0.25-1.1) ...
+#7 11.46 Setting up libc-dev-bin (2.36-9+deb12u10) ...
+#7 11.47 Setting up libcc1-0:arm64 (12.2.0-14+deb12u1) ...
+#7 11.48 Setting up libperl5.36:arm64 (5.36.0-7+deb12u2) ...
+#7 11.49 Setting up liblsan0:arm64 (12.2.0-14+deb12u1) ...
+#7 11.50 Setting up libitm1:arm64 (12.2.0-14+deb12u1) ...
+#7 11.51 Setting up libctf0:arm64 (2.40-2) ...
+#7 11.52 Setting up cpp-12 (12.2.0-14+deb12u1) ...
+#7 11.53 Setting up libldap-2.5-0:arm64 (2.5.13+dfsg-5) ...
+#7 11.54 Setting up perl (5.36.0-7+deb12u2) ...
+#7 11.56 Setting up libgprofng0:arm64 (2.40-2) ...
+#7 11.57 Setting up libgcc-12-dev:arm64 (12.2.0-14+deb12u1) ...
+#7 11.58 Setting up libdpkg-perl (1.21.22) ...
+#7 11.59 Setting up cpp (4:12.2.0-3) ...
+#7 11.61 Setting up libc6-dev:arm64 (2.36-9+deb12u10) ...
+#7 11.62 Setting up postgresql-client-common (248) ...
+#7 11.64 Setting up libstdc++-12-dev:arm64 (12.2.0-14+deb12u1) ...
+#7 11.65 Setting up libpq5:arm64 (15.13-0+deb12u1) ...
+#7 11.66 Setting up postgresql-client-15 (15.13-0+deb12u1) ...
+#7 12.20 update-alternatives: using /usr/share/postgresql/15/man/man1/psql.1.gz to provide /usr/share/man/man1/psql.1.gz (psql.1.gz) in auto mode
+#7 12.23 Setting up binutils-aarch64-linux-gnu (2.40-2) ...
+#7 12.24 Setting up libpq-dev (15.13-0+deb12u1) ...
+#7 12.25 Setting up binutils (2.40-2) ...
+#7 12.26 Setting up dpkg-dev (1.21.22) ...
+#7 12.28 Setting up gcc-12 (12.2.0-14+deb12u1) ...
+#7 12.29 Setting up g++-12 (12.2.0-14+deb12u1) ...
+#7 12.31 Setting up postgresql-client (15+248) ...
+#7 12.33 Setting up gcc (4:12.2.0-3) ...
+#7 12.36 Setting up g++ (4:12.2.0-3) ...
+#7 12.37 update-alternatives: using /usr/bin/g++ to provide /usr/bin/c++ (c++) in auto mode
+#7 12.37 Setting up build-essential (12.9) ...
+#7 12.39 Processing triggers for libc-bin (2.36-9+deb12u10) ...
+#7 DONE 16.1s
+
+#8 [backend  4/11] COPY requirements.txt .
+#8 DONE 0.1s
+
+#9 [backend  5/11] RUN pip install --no-cache-dir -r requirements.txt
+#9 1.840 Collecting Django==4.2.7 (from -r requirements.txt (line 1))
+#9 1.888   Downloading Django-4.2.7-py3-none-any.whl.metadata (4.1 kB)
+#9 1.923 Collecting djangorestframework==3.14.0 (from -r requirements.txt (line 2))
+#9 1.928   Downloading djangorestframework-3.14.0-py3-none-any.whl.metadata (10 kB)
+#9 1.954 Collecting django-cors-headers==4.3.1 (from -r requirements.txt (line 3))
+#9 1.958   Downloading django_cors_headers-4.3.1-py3-none-any.whl.metadata (16 kB)
+#9 1.979 Collecting djangorestframework-simplejwt==5.3.1 (from -r requirements.txt (line 4))
+#9 1.982   Downloading djangorestframework_simplejwt-5.3.1-py3-none-any.whl.metadata (4.3 kB)
+#9 1.994 Collecting python-decouple==3.8 (from -r requirements.txt (line 5))
+#9 1.997   Downloading python_decouple-3.8-py3-none-any.whl.metadata (14 kB)
+#9 2.016 Collecting python-dotenv==1.0.0 (from -r requirements.txt (line 6))
+#9 2.019   Downloading python_dotenv-1.0.0-py3-none-any.whl.metadata (21 kB)
+#9 2.050 Collecting drf-spectacular==0.26.5 (from -r requirements.txt (line 7))
+#9 2.055   Downloading drf_spectacular-0.26.5-py3-none-any.whl.metadata (13 kB)
+#9 2.195 Collecting drf-spectacular-sidecar (from -r requirements.txt (line 8))
+#9 2.200   Downloading drf_spectacular_sidecar-2025.7.1-py3-none-any.whl.metadata (3.6 kB)
+#9 2.219 Collecting django-filter==23.5 (from -r requirements.txt (line 9))
+#9 2.225   Downloading django_filter-23.5-py3-none-any.whl.metadata (5.2 kB)
+#9 2.414 Collecting Pillow==10.2.0 (from -r requirements.txt (line 10))
+#9 2.421   Downloading pillow-10.2.0-cp311-cp311-manylinux_2_28_aarch64.whl.metadata (9.7 kB)
+#9 2.489 Collecting psycopg2-binary==2.9.9 (from -r requirements.txt (line 11))
+#9 2.494   Downloading psycopg2_binary-2.9.9-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (4.4 kB)
+#9 2.515 Collecting gunicorn==21.2.0 (from -r requirements.txt (line 12))
+#9 2.520   Downloading gunicorn-21.2.0-py3-none-any.whl.metadata (4.1 kB)
+#9 2.602 Collecting redis==5.0.1 (from -r requirements.txt (line 13))
+#9 2.606   Downloading redis-5.0.1-py3-none-any.whl.metadata (8.9 kB)
+#9 2.664 Collecting celery==5.3.6 (from -r requirements.txt (line 14))
+#9 2.675   Downloading celery-5.3.6-py3-none-any.whl.metadata (21 kB)
+#9 2.699 Collecting django-redis==5.4.0 (from -r requirements.txt (line 15))
+#9 2.704   Downloading django_redis-5.4.0-py3-none-any.whl.metadata (32 kB)
+#9 2.854 Collecting whitenoise==6.6.0 (from -r requirements.txt (line 16))
+#9 2.864   Downloading whitenoise-6.6.0-py3-none-any.whl.metadata (3.7 kB)
+#9 2.880 Collecting dj-database-url==3.0.1 (from -r requirements.txt (line 17))
+#9 2.887   Downloading dj_database_url-3.0.1-py3-none-any.whl.metadata (14 kB)
+#9 2.923 Collecting django-extensions (from -r requirements.txt (line 18))
+#9 2.927   Downloading django_extensions-4.1-py3-none-any.whl.metadata (6.1 kB)
+#9 2.960 Collecting asgiref<4,>=3.6.0 (from Django==4.2.7->-r requirements.txt (line 1))
+#9 2.964   Downloading asgiref-3.9.1-py3-none-any.whl.metadata (9.3 kB)
+#9 2.982 Collecting sqlparse>=0.3.1 (from Django==4.2.7->-r requirements.txt (line 1))
+#9 2.985   Downloading sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+#9 3.066 Collecting pytz (from djangorestframework==3.14.0->-r requirements.txt (line 2))
+#9 3.069   Downloading pytz-2025.2-py2.py3-none-any.whl.metadata (22 kB)
+#9 3.149 Collecting pyjwt<3,>=1.7.1 (from djangorestframework-simplejwt==5.3.1->-r requirements.txt (line 4))
+#9 3.152   Downloading PyJWT-2.10.1-py3-none-any.whl.metadata (4.0 kB)
+#9 3.212 Collecting uritemplate>=2.0.0 (from drf-spectacular==0.26.5->-r requirements.txt (line 7))
+#9 3.215   Downloading uritemplate-4.2.0-py3-none-any.whl.metadata (2.6 kB)
+#9 3.255 Collecting PyYAML>=5.1 (from drf-spectacular==0.26.5->-r requirements.txt (line 7))
+#9 3.259   Downloading PyYAML-6.0.2-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (2.1 kB)
+#9 3.295 Collecting jsonschema>=2.6.0 (from drf-spectacular==0.26.5->-r requirements.txt (line 7))
+#9 3.298   Downloading jsonschema-4.24.0-py3-none-any.whl.metadata (7.8 kB)
+#9 3.309 Collecting inflection>=0.3.1 (from drf-spectacular==0.26.5->-r requirements.txt (line 7))
+#9 3.312   Downloading inflection-0.5.1-py2.py3-none-any.whl.metadata (1.7 kB)
+#9 3.356 Collecting packaging (from gunicorn==21.2.0->-r requirements.txt (line 12))
+#9 3.358   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+#9 3.475 Collecting billiard<5.0,>=4.2.0 (from celery==5.3.6->-r requirements.txt (line 14))
+#9 3.478   Downloading billiard-4.2.1-py3-none-any.whl.metadata (4.4 kB)
+#9 3.492 Collecting click-didyoumean>=0.3.0 (from celery==5.3.6->-r requirements.txt (line 14))
+#9 3.495   Downloading click_didyoumean-0.3.1-py3-none-any.whl.metadata (3.9 kB)
+#9 3.508 Collecting click-plugins>=1.1.1 (from celery==5.3.6->-r requirements.txt (line 14))
+#9 3.512   Downloading click_plugins-1.1.1.2-py2.py3-none-any.whl.metadata (6.5 kB)
+#9 3.527 Collecting click-repl>=0.2.0 (from celery==5.3.6->-r requirements.txt (line 14))
+#9 3.530   Downloading click_repl-0.3.0-py3-none-any.whl.metadata (3.6 kB)
+#9 3.551 Collecting click<9.0,>=8.1.2 (from celery==5.3.6->-r requirements.txt (line 14))
+#9 3.555   Downloading click-8.2.1-py3-none-any.whl.metadata (2.5 kB)
+#9 3.599 Collecting kombu<6.0,>=5.3.4 (from celery==5.3.6->-r requirements.txt (line 14))
+#9 3.610   Downloading kombu-5.5.4-py3-none-any.whl.metadata (3.5 kB)
+#9 3.628 Collecting python-dateutil>=2.8.2 (from celery==5.3.6->-r requirements.txt (line 14))
+#9 3.632   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#9 3.649 Collecting tzdata>=2022.7 (from celery==5.3.6->-r requirements.txt (line 14))
+#9 3.652   Downloading tzdata-2025.2-py2.py3-none-any.whl.metadata (1.4 kB)
+#9 3.667 Collecting vine<6.0,>=5.1.0 (from celery==5.3.6->-r requirements.txt (line 14))
+#9 3.670   Downloading vine-5.1.0-py3-none-any.whl.metadata (2.7 kB)
+#9 3.796 Collecting prompt-toolkit>=3.0.36 (from click-repl>=0.2.0->celery==5.3.6->-r requirements.txt (line 14))
+#9 3.799   Downloading prompt_toolkit-3.0.51-py3-none-any.whl.metadata (6.4 kB)
+#9 3.838 Collecting attrs>=22.2.0 (from jsonschema>=2.6.0->drf-spectacular==0.26.5->-r requirements.txt (line 7))
+#9 3.842   Downloading attrs-25.3.0-py3-none-any.whl.metadata (10 kB)
+#9 3.859 Collecting jsonschema-specifications>=2023.03.6 (from jsonschema>=2.6.0->drf-spectacular==0.26.5->-r requirements.txt (line 7))
+#9 3.863   Downloading jsonschema_specifications-2025.4.1-py3-none-any.whl.metadata (2.9 kB)
+#9 3.896 Collecting referencing>=0.28.4 (from jsonschema>=2.6.0->drf-spectacular==0.26.5->-r requirements.txt (line 7))
+#9 3.899   Downloading referencing-0.36.2-py3-none-any.whl.metadata (2.8 kB)
+#9 4.236 Collecting rpds-py>=0.7.1 (from jsonschema>=2.6.0->drf-spectacular==0.26.5->-r requirements.txt (line 7))
+#9 4.241   Downloading rpds_py-0.26.0-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (4.2 kB)
+#9 4.288 Collecting amqp<6.0.0,>=5.1.1 (from kombu<6.0,>=5.3.4->celery==5.3.6->-r requirements.txt (line 14))
+#9 4.291   Downloading amqp-5.3.1-py3-none-any.whl.metadata (8.9 kB)
+#9 4.330 Collecting six>=1.5 (from python-dateutil>=2.8.2->celery==5.3.6->-r requirements.txt (line 14))
+#9 4.333   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#9 4.434 Collecting wcwidth (from prompt-toolkit>=3.0.36->click-repl>=0.2.0->celery==5.3.6->-r requirements.txt (line 14))
+#9 4.437   Downloading wcwidth-0.2.13-py2.py3-none-any.whl.metadata (14 kB)
+#9 4.474 Collecting typing-extensions>=4.4.0 (from referencing>=0.28.4->jsonschema>=2.6.0->drf-spectacular==0.26.5->-r requirements.txt (line 7))
+#9 4.478   Downloading typing_extensions-4.14.1-py3-none-any.whl.metadata (3.0 kB)
+#9 4.512 Downloading Django-4.2.7-py3-none-any.whl (8.0 MB)
+#9 4.556    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.0/8.0 MB 196.5 MB/s eta 0:00:00
+#9 4.561 Downloading djangorestframework-3.14.0-py3-none-any.whl (1.1 MB)
+#9 4.568    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.1/1.1 MB 227.5 MB/s eta 0:00:00
+#9 4.572 Downloading django_cors_headers-4.3.1-py3-none-any.whl (12 kB)
+#9 4.577 Downloading djangorestframework_simplejwt-5.3.1-py3-none-any.whl (101 kB)
+#9 4.579    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 101.3/101.3 kB 263.2 MB/s eta 0:00:00
+#9 4.583 Downloading python_decouple-3.8-py3-none-any.whl (9.9 kB)
+#9 4.586 Downloading python_dotenv-1.0.0-py3-none-any.whl (19 kB)
+#9 4.590 Downloading drf_spectacular-0.26.5-py3-none-any.whl (94 kB)
+#9 4.592    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 94.1/94.1 kB 301.6 MB/s eta 0:00:00
+#9 4.596 Downloading django_filter-23.5-py3-none-any.whl (94 kB)
+#9 4.598    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 94.4/94.4 kB 283.6 MB/s eta 0:00:00
+#9 4.602 Downloading pillow-10.2.0-cp311-cp311-manylinux_2_28_aarch64.whl (4.3 MB)
+#9 4.629    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.3/4.3 MB 179.0 MB/s eta 0:00:00
+#9 4.633 Downloading psycopg2_binary-2.9.9-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (2.9 MB)
+#9 4.649    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.9/2.9 MB 232.0 MB/s eta 0:00:00
+#9 4.656 Downloading gunicorn-21.2.0-py3-none-any.whl (80 kB)
+#9 4.658    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 80.2/80.2 kB 282.1 MB/s eta 0:00:00
+#9 4.661 Downloading redis-5.0.1-py3-none-any.whl (250 kB)
+#9 4.664    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 250.3/250.3 kB 319.5 MB/s eta 0:00:00
+#9 4.668 Downloading celery-5.3.6-py3-none-any.whl (422 kB)
+#9 4.671    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 422.0/422.0 kB 348.9 MB/s eta 0:00:00
+#9 4.675 Downloading django_redis-5.4.0-py3-none-any.whl (31 kB)
+#9 4.679 Downloading whitenoise-6.6.0-py3-none-any.whl (19 kB)
+#9 4.787 Downloading dj_database_url-3.0.1-py3-none-any.whl (8.8 kB)
+#9 4.792 Downloading drf_spectacular_sidecar-2025.7.1-py3-none-any.whl (2.4 MB)
+#9 4.807    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.4/2.4 MB 220.2 MB/s eta 0:00:00
+#9 4.813 Downloading django_extensions-4.1-py3-none-any.whl (232 kB)
+#9 4.815    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 233.0/233.0 kB 345.7 MB/s eta 0:00:00
+#9 4.817 Downloading asgiref-3.9.1-py3-none-any.whl (23 kB)
+#9 4.820 Downloading billiard-4.2.1-py3-none-any.whl (86 kB)
+#9 4.823    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 86.8/86.8 kB 284.9 MB/s eta 0:00:00
+#9 4.827 Downloading click-8.2.1-py3-none-any.whl (102 kB)
+#9 4.829    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 102.2/102.2 kB 290.6 MB/s eta 0:00:00
+#9 4.832 Downloading click_didyoumean-0.3.1-py3-none-any.whl (3.6 kB)
+#9 4.836 Downloading click_plugins-1.1.1.2-py2.py3-none-any.whl (11 kB)
+#9 4.839 Downloading click_repl-0.3.0-py3-none-any.whl (10 kB)
+#9 4.843 Downloading inflection-0.5.1-py2.py3-none-any.whl (9.5 kB)
+#9 4.845 Downloading jsonschema-4.24.0-py3-none-any.whl (88 kB)
+#9 4.847    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 88.7/88.7 kB 294.5 MB/s eta 0:00:00
+#9 4.853 Downloading kombu-5.5.4-py3-none-any.whl (210 kB)
+#9 4.855    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 210.0/210.0 kB 351.2 MB/s eta 0:00:00
+#9 4.858 Downloading vine-5.1.0-py3-none-any.whl (9.6 kB)
+#9 4.862 Downloading PyJWT-2.10.1-py3-none-any.whl (22 kB)
+#9 4.864 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#9 4.868    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 351.6 MB/s eta 0:00:00
+#9 4.877 Downloading PyYAML-6.0.2-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (736 kB)
+#9 4.883    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 736.8/736.8 kB 271.7 MB/s eta 0:00:00
+#9 4.886 Downloading sqlparse-0.5.3-py3-none-any.whl (44 kB)
+#9 4.888    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.4/44.4 kB 251.1 MB/s eta 0:00:00
+#9 4.892 Downloading tzdata-2025.2-py2.py3-none-any.whl (347 kB)
+#9 4.895    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 347.8/347.8 kB 362.4 MB/s eta 0:00:00
+#9 4.898 Downloading uritemplate-4.2.0-py3-none-any.whl (11 kB)
+#9 4.902 Downloading packaging-25.0-py3-none-any.whl (66 kB)
+#9 4.904    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 269.4 MB/s eta 0:00:00
+#9 4.908 Downloading pytz-2025.2-py2.py3-none-any.whl (509 kB)
+#9 4.912    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 509.2/509.2 kB 363.2 MB/s eta 0:00:00
+#9 4.918 Downloading amqp-5.3.1-py3-none-any.whl (50 kB)
+#9 4.920    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 50.9/50.9 kB 156.6 MB/s eta 0:00:00
+#9 4.924 Downloading attrs-25.3.0-py3-none-any.whl (63 kB)
+#9 4.926    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 63.8/63.8 kB 280.8 MB/s eta 0:00:00
+#9 4.930 Downloading jsonschema_specifications-2025.4.1-py3-none-any.whl (18 kB)
+#9 4.933 Downloading prompt_toolkit-3.0.51-py3-none-any.whl (387 kB)
+#9 4.936    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 387.8/387.8 kB 345.7 MB/s eta 0:00:00
+#9 4.940 Downloading referencing-0.36.2-py3-none-any.whl (26 kB)
+#9 4.945 Downloading rpds_py-0.26.0-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (381 kB)
+#9 4.948    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 381.5/381.5 kB 287.2 MB/s eta 0:00:00
+#9 4.951 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#9 4.954 Downloading typing_extensions-4.14.1-py3-none-any.whl (43 kB)
+#9 4.956    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 43.9/43.9 kB 163.4 MB/s eta 0:00:00
+#9 4.960 Downloading wcwidth-0.2.13-py2.py3-none-any.whl (34 kB)
+#9 5.306 Installing collected packages: wcwidth, pytz, python-decouple, whitenoise, vine, uritemplate, tzdata, typing-extensions, sqlparse, six, rpds-py, redis, PyYAML, python-dotenv, pyjwt, psycopg2-binary, prompt-toolkit, Pillow, packaging, inflection, click, billiard, attrs, asgiref, referencing, python-dateutil, gunicorn, Django, click-repl, click-plugins, click-didyoumean, amqp, kombu, jsonschema-specifications, drf-spectacular-sidecar, djangorestframework, django-redis, django-filter, django-extensions, django-cors-headers, dj-database-url, jsonschema, djangorestframework-simplejwt, celery, drf-spectacular
+#9 10.76 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#9 10.76 Successfully installed Django-4.2.7 Pillow-10.2.0 PyYAML-6.0.2 amqp-5.3.1 asgiref-3.9.1 attrs-25.3.0 billiard-4.2.1 celery-5.3.6 click-8.2.1 click-didyoumean-0.3.1 click-plugins-1.1.1.2 click-repl-0.3.0 dj-database-url-3.0.1 django-cors-headers-4.3.1 django-extensions-4.1 django-filter-23.5 django-redis-5.4.0 djangorestframework-3.14.0 djangorestframework-simplejwt-5.3.1 drf-spectacular-0.26.5 drf-spectacular-sidecar-2025.7.1 gunicorn-21.2.0 inflection-0.5.1 jsonschema-4.24.0 jsonschema-specifications-2025.4.1 kombu-5.5.4 packaging-25.0 prompt-toolkit-3.0.51 psycopg2-binary-2.9.9 pyjwt-2.10.1 python-dateutil-2.9.0.post0 python-decouple-3.8 python-dotenv-1.0.0 pytz-2025.2 redis-5.0.1 referencing-0.36.2 rpds-py-0.26.0 six-1.17.0 sqlparse-0.5.3 typing-extensions-4.14.1 tzdata-2025.2 uritemplate-4.2.0 vine-5.1.0 wcwidth-0.2.13 whitenoise-6.6.0
+#9 10.85 
+#9 10.85 [notice] A new release of pip is available: 24.0 -> 25.1.1
+#9 10.85 [notice] To update, run: pip install --upgrade pip
+#9 DONE 12.0s
+
+#10 [backend  6/11] COPY . .
+#10 DONE 0.1s
+
+#11 [backend  7/11] RUN mkdir -p /app/static /app/media
+#11 DONE 0.3s
+
+#12 [backend  8/11] COPY entrypoint.sh /entrypoint.sh
+#12 DONE 0.1s
+
+#13 [backend  9/11] RUN chmod +x /entrypoint.sh
+#13 DONE 0.2s
+
+#14 [backend 10/11] RUN adduser --disabled-password --gecos '' appuser
+#14 0.258 Adding user `appuser' ...
+#14 0.258 Adding new group `appuser' (1000) ...
+#14 0.281 Adding new user `appuser' (1000) with group `appuser (1000)' ...
+#14 0.314 Creating home directory `/home/appuser' ...
+#14 0.314 Copying files from `/etc/skel' ...
+#14 0.329 Adding new user `appuser' to supplemental / extra groups `users' ...
+#14 0.329 Adding user `appuser' to group `users' ...
+#14 DONE 0.4s
+
+#15 [backend 11/11] RUN chown -R appuser:appuser /app
+#15 DONE 0.4s
+
+#16 [backend] exporting to image
+#16 exporting layers
+#16 exporting layers 5.7s done
+#16 writing image sha256:94a1504a33ff369e682c0cae7273b9e7a78ebe05748e4ae62fc1ce0d544bc145 done
+#16 naming to docker.io/library/cadastro_unificado_api-backend done
+#16 DONE 5.7s
+Iniciando containers...
+Aguardando banco de dados...
+Verificando status do backend...
+Executando migrations...
+Operations to perform:
+  Synchronize unmigrated apps: api, authentication, cadastro, corsheaders, django_extensions, django_filters, drf_spectacular, drf_spectacular_sidecar, messages, rest_framework, rest_framework_simplejwt, staticfiles
+  Apply all migrations: admin, auth, contenttypes, sessions
+Synchronizing apps without migrations:
+  Creating tables...
+    Running deferred SQL...
+Running migrations:
+  No migrations to apply.
+Coletando arquivos estáticos...
+
+0 static files copied to '/app/static', 177 unmodified, 458 post-processed.
+Testando documentação da API...
+Verificando endpoints...
+{"name": "Cadastro Unificado API", "version": "1.0.0", "description": "API para integra\u00e7\u00e3o com banco de dados de cadastro unificado", "endpoints": {"auth": {"login": "/api/v1/auth/login/", "refresh": "/api/v1/auth/refresh/", "verify": "/api/v1/auth/verify/", "register": "/api/v1/auth/register/"}, "cadastro": {"pessoas": "/api/v1/cadastro/pessoas/", "enderecos": "/api/v1/cadastro/enderecos/"}, "docs": {"swagger": "/api/docs/", "redoc": "/api/redoc/", "schema": "/api/schema/"}}, "base_url": "http://10.13.65.37:8001"}<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="robots" content="NONE,NOARCHIVE">
+  <title>TypeError
+          at /api/schema/</title>
+  <style type="text/css">
+    html * { padding:0; margin:0; }
+    body * { padding:10px 20px; }
+    body * * { padding:0; }
+    body { font:small sans-serif; background-color:#fff; color:#000; }
+    body>div { border-bottom:1px solid #ddd; }
+    h1 { font-weight:normal; }
+    h2 { margin-bottom:.8em; }
+    h3 { margin:1em 0 .5em 0; }
+    h4 { margin:0 0 .5em 0; font-weight: normal; }
+    code, pre { font-size: 100%; white-space: pre-wrap; word-break: break-word; }
+    summary { cursor: pointer; }
+    table { border:1px solid #ccc; border-collapse: collapse; width:100%; background:white; }
+    tbody td, tbody th { vertical-align:top; padding:2px 3px; }
+    thead th {
+      padding:1px 6px 1px 3px; background:#fefefe; text-align:left;
+      font-weight:normal; font-size:11px; border:1px solid #ddd;
+    }
+    tbody th { width:12em; text-align:right; color:#666; padding-right:.5em; }
+    table.vars { margin:5px 10px 2px 40px; width: auto; }
+    table.vars td, table.req td { font-family:monospace; }
+    table td.code { width:100%; }
+    table td.code pre { overflow:hidden; }
+    table.source th { color:#666; }
+    table.source td { font-family:monospace; white-space:pre; border-bottom:1px solid #eee; }
+    ul.traceback { list-style-type:none; color: #222; }
+    ul.traceback li.cause { word-break: break-word; }
+    ul.traceback li.frame { padding-bottom:1em; color:#4f4f4f; }
+    ul.traceback li.user { background-color:#e0e0e0; color:#000 }
+    div.context { padding:10px 0; overflow:hidden; }
+    div.context ol { padding-left:30px; margin:0 10px; list-style-position: inside; }
+    div.context ol li { font-family:monospace; white-space:pre; color:#777; cursor:pointer; padding-left: 2px; }
+    div.context ol li pre { display:inline; }
+    div.context ol.context-line li { color:#464646; background-color:#dfdfdf; padding: 3px 2px; }
+    div.context ol.context-line li span { position:absolute; right:32px; }
+    .user div.context ol.context-line li { background-color:#bbb; color:#000; }
+    .user div.context ol li { color:#666; }
+    div.commands, summary.commands { margin-left: 40px; }
+    div.commands a, summary.commands { color:#555; text-decoration:none; }
+    .user div.commands a { color: black; }
+    #summary { background: #ffc; }
+    #summary h2 { font-weight: normal; color: #666; }
+    #explanation { background:#eee; }
+    #template, #template-not-exist { background:#f6f6f6; }
+    #template-not-exist ul { margin: 0 0 10px 20px; }
+    #template-not-exist .postmortem-section { margin-bottom: 3px; }
+    #unicode-hint { background:#eee; }
+    #traceback { background:#eee; }
+    #requestinfo { background:#f6f6f6; padding-left:120px; }
+    #summary table { border:none; background:transparent; }
+    #requestinfo h2, #requestinfo h3 { position:relative; margin-left:-100px; }
+    #requestinfo h3 { margin-bottom:-1em; }
+    .error { background: #ffc; }
+    .specific { color:#cc3300; font-weight:bold; }
+    h2 span.commands { font-size:.7em; font-weight:normal; }
+    span.commands a:link {color:#5E5694;}
+    pre.exception_value { font-family: sans-serif; color: #575757; font-size: 1.5em; margin: 10px 0 10px 0; }
+    .append-bottom { margin-bottom: 10px; }
+    .fname { user-select: all; }
+  </style>
+  
+  <script>
+    function hideAll(elems) {
+      for (var e = 0; e < elems.length; e++) {
+        elems[e].style.display = 'none';
+      }
+    }
+    window.onload = function() {
+      hideAll(document.querySelectorAll('ol.pre-context'));
+      hideAll(document.querySelectorAll('ol.post-context'));
+      hideAll(document.querySelectorAll('div.pastebin'));
+    }
+    function toggle() {
+      for (var i = 0; i < arguments.length; i++) {
+        var e = document.getElementById(arguments[i]);
+        if (e) {
+          e.style.display = e.style.display == 'none' ? 'block': 'none';
+        }
+      }
+      return false;
+    }
+    function switchPastebinFriendly(link) {
+      s1 = "Switch to copy-and-paste view";
+      s2 = "Switch back to interactive view";
+      link.textContent = link.textContent.trim() == s1 ? s2: s1;
+      toggle('browserTraceback', 'pastebinTraceback');
+      return false;
+    }
+  </script>
+  
+</head>
+<body>
+<div id="summary">
+  <h1>TypeError
+       at /api/schema/</h1>
+  <pre class="exception_value">ViewInspector.__init__() got an unexpected keyword argument &#x27;urlconf&#x27;</pre>
+  <table class="meta">
+
+    <tr>
+      <th>Request Method:</th>
+      <td>GET</td>
+    </tr>
+    <tr>
+      <th>Request URL:</th>
+      <td>http://localhost:8001/api/schema/</td>
+    </tr>
+
+    <tr>
+      <th>Django Version:</th>
+      <td>4.2.7</td>
+    </tr>
+
+    <tr>
+      <th>Exception Type:</th>
+      <td>TypeError</td>
+    </tr>
+
+
+    <tr>
+      <th>Exception Value:</th>
+      <td><pre>ViewInspector.__init__() got an unexpected keyword argument &#x27;urlconf&#x27;</pre></td>
+    </tr>
+
+
+    <tr>
+      <th>Exception Location:</th>
+      <td><span class="fname">/usr/local/lib/python3.11/site-packages/drf_spectacular/views.py</span>, line 89, in _get_schema_response</td>
+    </tr>
+
+
+    <tr>
+      <th>Raised during:</th>
+      <td>drf_spectacular.views.SpectacularAPIView</td>
+    </tr>
+
+    <tr>
+      <th>Python Executable:</th>
+      <td>/usr/local/bin/python3.11</td>
+    </tr>
+    <tr>
+      <th>Python Version:</th>
+      <td>3.11.13</td>
+    </tr>
+    <tr>
+      <th>Python Path:</th>
+      <td><pre>[&#x27;/app&#x27;,
+ &#x27;/usr/local/bin&#x27;,
+ &#x27;/usr/local/lib/python311.zip&#x27;,
+ &#x27;/usr/local/lib/python3.11&#x27;,
+ &#x27;/usr/local/lib/python3.11/lib-dynload&#x27;,
+ &#x27;/usr/local/lib/python3.11/site-packages&#x27;]</pre></td>
+    </tr>
+    <tr>
+      <th>Server time:</th>
+      <td>Wed, 16 Jul 2025 17:05:56 -0300</td>
+    </tr>
+  </table>
+</div>
+
+
+
+
+<div id="traceback">
+  <h2>Traceback <span class="commands"><a href="#" onclick="return switchPastebinFriendly(this);">
+    Switch to copy-and-paste view</a></span>
+  </h2>
+  <div id="browserTraceback">
+    <ul class="traceback">
+      
+        
+        <li class="frame django">
+          
+            <code class="fname">/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py</code>, line 55, in inner
+          
+
+          
+            <div class="context" id="c281473439745088">
+              
+                <ol start="48" class="pre-context" id="pre281473439745088">
+                
+                  <li onclick="toggle('pre281473439745088', 'post281473439745088')"><pre></pre></li>
+                
+                  <li onclick="toggle('pre281473439745088', 'post281473439745088')"><pre>        return inner</pre></li>
+                
+                  <li onclick="toggle('pre281473439745088', 'post281473439745088')"><pre>    else:</pre></li>
+                
+                  <li onclick="toggle('pre281473439745088', 'post281473439745088')"><pre></pre></li>
+                
+                  <li onclick="toggle('pre281473439745088', 'post281473439745088')"><pre>        @wraps(get_response)</pre></li>
+                
+                  <li onclick="toggle('pre281473439745088', 'post281473439745088')"><pre>        def inner(request):</pre></li>
+                
+                  <li onclick="toggle('pre281473439745088', 'post281473439745088')"><pre>            try:</pre></li>
+                
+                </ol>
+              
+              <ol start="55" class="context-line">
+                <li onclick="toggle('pre281473439745088', 'post281473439745088')"><pre>                response = get_response(request)
+                               ^^^^^^^^^^^^^^^^^^^^^</pre> <span>…</span></li>
+              </ol>
+              
+                <ol start='56' class="post-context" id="post281473439745088">
+                  
+                  <li onclick="toggle('pre281473439745088', 'post281473439745088')"><pre>            except Exception as exc:</pre></li>
+                  
+                  <li onclick="toggle('pre281473439745088', 'post281473439745088')"><pre>                response = response_for_exception(request, exc)</pre></li>
+                  
+                  <li onclick="toggle('pre281473439745088', 'post281473439745088')"><pre>            return response</pre></li>
+                  
+                  <li onclick="toggle('pre281473439745088', 'post281473439745088')"><pre></pre></li>
+                  
+                  <li onclick="toggle('pre281473439745088', 'post281473439745088')"><pre>        return inner</pre></li>
+                  
+                  <li onclick="toggle('pre281473439745088', 'post281473439745088')"><pre></pre></li>
+                  
+              </ol>
+              
+            </div>
+          
+
+          
+            
+              <details>
+                <summary class="commands">Local vars</summary>
+            
+            <table class="vars" id="v281473439745088">
+              <thead>
+                <tr>
+                  <th>Variable</th>
+                  <th>Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                  <tr>
+                    <td>exc</td>
+                    <td class="code"><pre>TypeError(&quot;ViewInspector.__init__() got an unexpected keyword argument &#x27;urlconf&#x27;&quot;)</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>get_response</td>
+                    <td class="code"><pre>&lt;bound method BaseHandler._get_response of &lt;django.core.handlers.wsgi.WSGIHandler object at 0xffffa5550050&gt;&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>request</td>
+                    <td class="code"><pre>&lt;WSGIRequest: GET &#x27;/api/schema/&#x27;&gt;</pre></td>
+                  </tr>
+                
+              </tbody>
+            </table>
+            </details>
+          
+        </li>
+      
+        
+        <li class="frame django">
+          
+            <code class="fname">/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py</code>, line 197, in _get_response
+          
+
+          
+            <div class="context" id="c281473439745344">
+              
+                <ol start="190" class="pre-context" id="pre281473439745344">
+                
+                  <li onclick="toggle('pre281473439745344', 'post281473439745344')"><pre></pre></li>
+                
+                  <li onclick="toggle('pre281473439745344', 'post281473439745344')"><pre>        if response is None:</pre></li>
+                
+                  <li onclick="toggle('pre281473439745344', 'post281473439745344')"><pre>            wrapped_callback = self.make_view_atomic(callback)</pre></li>
+                
+                  <li onclick="toggle('pre281473439745344', 'post281473439745344')"><pre>            # If it is an asynchronous view, run it in a subthread.</pre></li>
+                
+                  <li onclick="toggle('pre281473439745344', 'post281473439745344')"><pre>            if iscoroutinefunction(wrapped_callback):</pre></li>
+                
+                  <li onclick="toggle('pre281473439745344', 'post281473439745344')"><pre>                wrapped_callback = async_to_sync(wrapped_callback)</pre></li>
+                
+                  <li onclick="toggle('pre281473439745344', 'post281473439745344')"><pre>            try:</pre></li>
+                
+                </ol>
+              
+              <ol start="197" class="context-line">
+                <li onclick="toggle('pre281473439745344', 'post281473439745344')"><pre>                response = wrapped_callback(request, *callback_args, **callback_kwargs)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre> <span>…</span></li>
+              </ol>
+              
+                <ol start='198' class="post-context" id="post281473439745344">
+                  
+                  <li onclick="toggle('pre281473439745344', 'post281473439745344')"><pre>            except Exception as e:</pre></li>
+                  
+                  <li onclick="toggle('pre281473439745344', 'post281473439745344')"><pre>                response = self.process_exception_by_middleware(e, request)</pre></li>
+                  
+                  <li onclick="toggle('pre281473439745344', 'post281473439745344')"><pre>                if response is None:</pre></li>
+                  
+                  <li onclick="toggle('pre281473439745344', 'post281473439745344')"><pre>                    raise</pre></li>
+                  
+                  <li onclick="toggle('pre281473439745344', 'post281473439745344')"><pre></pre></li>
+                  
+                  <li onclick="toggle('pre281473439745344', 'post281473439745344')"><pre>        # Complain if the view returned None (a common error).</pre></li>
+                  
+              </ol>
+              
+            </div>
+          
+
+          
+            
+              <details>
+                <summary class="commands">Local vars</summary>
+            
+            <table class="vars" id="v281473439745344">
+              <thead>
+                <tr>
+                  <th>Variable</th>
+                  <th>Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                  <tr>
+                    <td>callback</td>
+                    <td class="code"><pre>&lt;function View.as_view.&lt;locals&gt;.view at 0xffffa47e0860&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>callback_args</td>
+                    <td class="code"><pre>()</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>callback_kwargs</td>
+                    <td class="code"><pre>{}</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>middleware_method</td>
+                    <td class="code"><pre>&lt;bound method CsrfViewMiddleware.process_view of &lt;CsrfViewMiddleware get_response=convert_exception_to_response.&lt;locals&gt;.inner&gt;&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>request</td>
+                    <td class="code"><pre>&lt;WSGIRequest: GET &#x27;/api/schema/&#x27;&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>response</td>
+                    <td class="code"><pre>None</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>self</td>
+                    <td class="code"><pre>&lt;django.core.handlers.wsgi.WSGIHandler object at 0xffffa5550050&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>wrapped_callback</td>
+                    <td class="code"><pre>&lt;function View.as_view.&lt;locals&gt;.view at 0xffffa47e0860&gt;</pre></td>
+                  </tr>
+                
+              </tbody>
+            </table>
+            </details>
+          
+        </li>
+      
+        
+        <li class="frame django">
+          
+            <code class="fname">/usr/local/lib/python3.11/site-packages/django/views/decorators/csrf.py</code>, line 56, in wrapper_view
+          
+
+          
+            <div class="context" id="c281473439745216">
+              
+                <ol start="49" class="pre-context" id="pre281473439745216">
+                
+                  <li onclick="toggle('pre281473439745216', 'post281473439745216')"><pre>def csrf_exempt(view_func):</pre></li>
+                
+                  <li onclick="toggle('pre281473439745216', 'post281473439745216')"><pre>    &quot;&quot;&quot;Mark a view function as being exempt from the CSRF view protection.&quot;&quot;&quot;</pre></li>
+                
+                  <li onclick="toggle('pre281473439745216', 'post281473439745216')"><pre></pre></li>
+                
+                  <li onclick="toggle('pre281473439745216', 'post281473439745216')"><pre>    # view_func.csrf_exempt = True would also work, but decorators are nicer</pre></li>
+                
+                  <li onclick="toggle('pre281473439745216', 'post281473439745216')"><pre>    # if they don&#x27;t have side effects, so return a new function.</pre></li>
+                
+                  <li onclick="toggle('pre281473439745216', 'post281473439745216')"><pre>    @wraps(view_func)</pre></li>
+                
+                  <li onclick="toggle('pre281473439745216', 'post281473439745216')"><pre>    def wrapper_view(*args, **kwargs):</pre></li>
+                
+                </ol>
+              
+              <ol start="56" class="context-line">
+                <li onclick="toggle('pre281473439745216', 'post281473439745216')"><pre>        return view_func(*args, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^</pre> <span>…</span></li>
+              </ol>
+              
+                <ol start='57' class="post-context" id="post281473439745216">
+                  
+                  <li onclick="toggle('pre281473439745216', 'post281473439745216')"><pre></pre></li>
+                  
+                  <li onclick="toggle('pre281473439745216', 'post281473439745216')"><pre>    wrapper_view.csrf_exempt = True</pre></li>
+                  
+                  <li onclick="toggle('pre281473439745216', 'post281473439745216')"><pre>    return wrapper_view</pre></li>
+                  
+              </ol>
+              
+            </div>
+          
+
+          
+            
+              <details>
+                <summary class="commands">Local vars</summary>
+            
+            <table class="vars" id="v281473439745216">
+              <thead>
+                <tr>
+                  <th>Variable</th>
+                  <th>Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                  <tr>
+                    <td>args</td>
+                    <td class="code"><pre>(&lt;WSGIRequest: GET &#x27;/api/schema/&#x27;&gt;,)</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>kwargs</td>
+                    <td class="code"><pre>{}</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>view_func</td>
+                    <td class="code"><pre>&lt;function View.as_view.&lt;locals&gt;.view at 0xffffa4956020&gt;</pre></td>
+                  </tr>
+                
+              </tbody>
+            </table>
+            </details>
+          
+        </li>
+      
+        
+        <li class="frame django">
+          
+            <code class="fname">/usr/local/lib/python3.11/site-packages/django/views/generic/base.py</code>, line 104, in view
+          
+
+          
+            <div class="context" id="c281473439592960">
+              
+                <ol start="97" class="pre-context" id="pre281473439592960">
+                
+                  <li onclick="toggle('pre281473439592960', 'post281473439592960')"><pre>            self = cls(**initkwargs)</pre></li>
+                
+                  <li onclick="toggle('pre281473439592960', 'post281473439592960')"><pre>            self.setup(request, *args, **kwargs)</pre></li>
+                
+                  <li onclick="toggle('pre281473439592960', 'post281473439592960')"><pre>            if not hasattr(self, &quot;request&quot;):</pre></li>
+                
+                  <li onclick="toggle('pre281473439592960', 'post281473439592960')"><pre>                raise AttributeError(</pre></li>
+                
+                  <li onclick="toggle('pre281473439592960', 'post281473439592960')"><pre>                    &quot;%s instance has no &#x27;request&#x27; attribute. Did you override &quot;</pre></li>
+                
+                  <li onclick="toggle('pre281473439592960', 'post281473439592960')"><pre>                    &quot;setup() and forget to call super()?&quot; % cls.__name__</pre></li>
+                
+                  <li onclick="toggle('pre281473439592960', 'post281473439592960')"><pre>                )</pre></li>
+                
+                </ol>
+              
+              <ol start="104" class="context-line">
+                <li onclick="toggle('pre281473439592960', 'post281473439592960')"><pre>            return self.dispatch(request, *args, **kwargs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre> <span>…</span></li>
+              </ol>
+              
+                <ol start='105' class="post-context" id="post281473439592960">
+                  
+                  <li onclick="toggle('pre281473439592960', 'post281473439592960')"><pre></pre></li>
+                  
+                  <li onclick="toggle('pre281473439592960', 'post281473439592960')"><pre>        view.view_class = cls</pre></li>
+                  
+                  <li onclick="toggle('pre281473439592960', 'post281473439592960')"><pre>        view.view_initkwargs = initkwargs</pre></li>
+                  
+                  <li onclick="toggle('pre281473439592960', 'post281473439592960')"><pre></pre></li>
+                  
+                  <li onclick="toggle('pre281473439592960', 'post281473439592960')"><pre>        # __name__ and __qualname__ are intentionally left unchanged as</pre></li>
+                  
+                  <li onclick="toggle('pre281473439592960', 'post281473439592960')"><pre>        # view_class should be used to robustly determine the name of the view</pre></li>
+                  
+              </ol>
+              
+            </div>
+          
+
+          
+            
+              <details>
+                <summary class="commands">Local vars</summary>
+            
+            <table class="vars" id="v281473439592960">
+              <thead>
+                <tr>
+                  <th>Variable</th>
+                  <th>Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                  <tr>
+                    <td>args</td>
+                    <td class="code"><pre>()</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>cls</td>
+                    <td class="code"><pre>&lt;class &#x27;drf_spectacular.views.SpectacularAPIView&#x27;&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>initkwargs</td>
+                    <td class="code"><pre>{}</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>kwargs</td>
+                    <td class="code"><pre>{}</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>request</td>
+                    <td class="code"><pre>&lt;WSGIRequest: GET &#x27;/api/schema/&#x27;&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>self</td>
+                    <td class="code"><pre>&lt;drf_spectacular.views.SpectacularAPIView object at 0xffffa46177d0&gt;</pre></td>
+                  </tr>
+                
+              </tbody>
+            </table>
+            </details>
+          
+        </li>
+      
+        
+        <li class="frame user">
+          
+            <code class="fname">/usr/local/lib/python3.11/site-packages/rest_framework/views.py</code>, line 509, in dispatch
+          
+
+          
+            <div class="context" id="c281473439744768">
+              
+                <ol start="502" class="pre-context" id="pre281473439744768">
+                
+                  <li onclick="toggle('pre281473439744768', 'post281473439744768')"><pre>                                  self.http_method_not_allowed)</pre></li>
+                
+                  <li onclick="toggle('pre281473439744768', 'post281473439744768')"><pre>            else:</pre></li>
+                
+                  <li onclick="toggle('pre281473439744768', 'post281473439744768')"><pre>                handler = self.http_method_not_allowed</pre></li>
+                
+                  <li onclick="toggle('pre281473439744768', 'post281473439744768')"><pre></pre></li>
+                
+                  <li onclick="toggle('pre281473439744768', 'post281473439744768')"><pre>            response = handler(request, *args, **kwargs)</pre></li>
+                
+                  <li onclick="toggle('pre281473439744768', 'post281473439744768')"><pre></pre></li>
+                
+                  <li onclick="toggle('pre281473439744768', 'post281473439744768')"><pre>        except Exception as exc:</pre></li>
+                
+                </ol>
+              
+              <ol start="509" class="context-line">
+                <li onclick="toggle('pre281473439744768', 'post281473439744768')"><pre>            response = self.handle_exception(exc)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^</pre> <span>…</span></li>
+              </ol>
+              
+                <ol start='510' class="post-context" id="post281473439744768">
+                  
+                  <li onclick="toggle('pre281473439744768', 'post281473439744768')"><pre></pre></li>
+                  
+                  <li onclick="toggle('pre281473439744768', 'post281473439744768')"><pre>        self.response = self.finalize_response(request, response, *args, **kwargs)</pre></li>
+                  
+                  <li onclick="toggle('pre281473439744768', 'post281473439744768')"><pre>        return self.response</pre></li>
+                  
+                  <li onclick="toggle('pre281473439744768', 'post281473439744768')"><pre></pre></li>
+                  
+                  <li onclick="toggle('pre281473439744768', 'post281473439744768')"><pre>    def options(self, request, *args, **kwargs):</pre></li>
+                  
+                  <li onclick="toggle('pre281473439744768', 'post281473439744768')"><pre>        &quot;&quot;&quot;</pre></li>
+                  
+              </ol>
+              
+            </div>
+          
+
+          
+            
+              <details>
+                <summary class="commands">Local vars</summary>
+            
+            <table class="vars" id="v281473439744768">
+              <thead>
+                <tr>
+                  <th>Variable</th>
+                  <th>Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                  <tr>
+                    <td>args</td>
+                    <td class="code"><pre>()</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>handler</td>
+                    <td class="code"><pre>&lt;bound method SpectacularAPIView.get of &lt;drf_spectacular.views.SpectacularAPIView object at 0xffffa46177d0&gt;&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>kwargs</td>
+                    <td class="code"><pre>{}</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>request</td>
+                    <td class="code"><pre>&lt;rest_framework.request.Request: GET &#x27;/api/schema/&#x27;&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>self</td>
+                    <td class="code"><pre>&lt;drf_spectacular.views.SpectacularAPIView object at 0xffffa46177d0&gt;</pre></td>
+                  </tr>
+                
+              </tbody>
+            </table>
+            </details>
+          
+        </li>
+      
+        
+        <li class="frame user">
+          
+            <code class="fname">/usr/local/lib/python3.11/site-packages/rest_framework/views.py</code>, line 469, in handle_exception
+          
+
+          
+            <div class="context" id="c281473439745024">
+              
+                <ol start="462" class="pre-context" id="pre281473439745024">
+                
+                  <li onclick="toggle('pre281473439745024', 'post281473439745024')"><pre></pre></li>
+                
+                  <li onclick="toggle('pre281473439745024', 'post281473439745024')"><pre>        exception_handler = self.get_exception_handler()</pre></li>
+                
+                  <li onclick="toggle('pre281473439745024', 'post281473439745024')"><pre></pre></li>
+                
+                  <li onclick="toggle('pre281473439745024', 'post281473439745024')"><pre>        context = self.get_exception_handler_context()</pre></li>
+                
+                  <li onclick="toggle('pre281473439745024', 'post281473439745024')"><pre>        response = exception_handler(exc, context)</pre></li>
+                
+                  <li onclick="toggle('pre281473439745024', 'post281473439745024')"><pre></pre></li>
+                
+                  <li onclick="toggle('pre281473439745024', 'post281473439745024')"><pre>        if response is None:</pre></li>
+                
+                </ol>
+              
+              <ol start="469" class="context-line">
+                <li onclick="toggle('pre281473439745024', 'post281473439745024')"><pre>            self.raise_uncaught_exception(exc)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre> <span>…</span></li>
+              </ol>
+              
+                <ol start='470' class="post-context" id="post281473439745024">
+                  
+                  <li onclick="toggle('pre281473439745024', 'post281473439745024')"><pre></pre></li>
+                  
+                  <li onclick="toggle('pre281473439745024', 'post281473439745024')"><pre>        response.exception = True</pre></li>
+                  
+                  <li onclick="toggle('pre281473439745024', 'post281473439745024')"><pre>        return response</pre></li>
+                  
+                  <li onclick="toggle('pre281473439745024', 'post281473439745024')"><pre></pre></li>
+                  
+                  <li onclick="toggle('pre281473439745024', 'post281473439745024')"><pre>    def raise_uncaught_exception(self, exc):</pre></li>
+                  
+                  <li onclick="toggle('pre281473439745024', 'post281473439745024')"><pre>        if settings.DEBUG:</pre></li>
+                  
+              </ol>
+              
+            </div>
+          
+
+          
+            
+              <details>
+                <summary class="commands">Local vars</summary>
+            
+            <table class="vars" id="v281473439745024">
+              <thead>
+                <tr>
+                  <th>Variable</th>
+                  <th>Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                  <tr>
+                    <td>context</td>
+                    <td class="code"><pre>{&#x27;args&#x27;: (),
+ &#x27;kwargs&#x27;: {},
+ &#x27;request&#x27;: &lt;rest_framework.request.Request: GET &#x27;/api/schema/&#x27;&gt;,
+ &#x27;view&#x27;: &lt;drf_spectacular.views.SpectacularAPIView object at 0xffffa46177d0&gt;}</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>exc</td>
+                    <td class="code"><pre>TypeError(&quot;ViewInspector.__init__() got an unexpected keyword argument &#x27;urlconf&#x27;&quot;)</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>exception_handler</td>
+                    <td class="code"><pre>&lt;function exception_handler at 0xffffa4a0f1a0&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>response</td>
+                    <td class="code"><pre>None</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>self</td>
+                    <td class="code"><pre>&lt;drf_spectacular.views.SpectacularAPIView object at 0xffffa46177d0&gt;</pre></td>
+                  </tr>
+                
+              </tbody>
+            </table>
+            </details>
+          
+        </li>
+      
+        
+        <li class="frame user">
+          
+            <code class="fname">/usr/local/lib/python3.11/site-packages/rest_framework/views.py</code>, line 480, in raise_uncaught_exception
+          
+
+          
+            <div class="context" id="c281473439745280">
+              
+                <ol start="473" class="pre-context" id="pre281473439745280">
+                
+                  <li onclick="toggle('pre281473439745280', 'post281473439745280')"><pre></pre></li>
+                
+                  <li onclick="toggle('pre281473439745280', 'post281473439745280')"><pre>    def raise_uncaught_exception(self, exc):</pre></li>
+                
+                  <li onclick="toggle('pre281473439745280', 'post281473439745280')"><pre>        if settings.DEBUG:</pre></li>
+                
+                  <li onclick="toggle('pre281473439745280', 'post281473439745280')"><pre>            request = self.request</pre></li>
+                
+                  <li onclick="toggle('pre281473439745280', 'post281473439745280')"><pre>            renderer_format = getattr(request.accepted_renderer, &#x27;format&#x27;)</pre></li>
+                
+                  <li onclick="toggle('pre281473439745280', 'post281473439745280')"><pre>            use_plaintext_traceback = renderer_format not in (&#x27;html&#x27;, &#x27;api&#x27;, &#x27;admin&#x27;)</pre></li>
+                
+                  <li onclick="toggle('pre281473439745280', 'post281473439745280')"><pre>            request.force_plaintext_errors(use_plaintext_traceback)</pre></li>
+                
+                </ol>
+              
+              <ol start="480" class="context-line">
+                <li onclick="toggle('pre281473439745280', 'post281473439745280')"><pre>        raise exc
+             ^^^^^^^^^</pre> <span>…</span></li>
+              </ol>
+              
+                <ol start='481' class="post-context" id="post281473439745280">
+                  
+                  <li onclick="toggle('pre281473439745280', 'post281473439745280')"><pre></pre></li>
+                  
+                  <li onclick="toggle('pre281473439745280', 'post281473439745280')"><pre>    # Note: Views are made CSRF exempt from within `as_view` as to prevent</pre></li>
+                  
+                  <li onclick="toggle('pre281473439745280', 'post281473439745280')"><pre>    # accidental removal of this exemption in cases where `dispatch` needs to</pre></li>
+                  
+                  <li onclick="toggle('pre281473439745280', 'post281473439745280')"><pre>    # be overridden.</pre></li>
+                  
+                  <li onclick="toggle('pre281473439745280', 'post281473439745280')"><pre>    def dispatch(self, request, *args, **kwargs):</pre></li>
+                  
+                  <li onclick="toggle('pre281473439745280', 'post281473439745280')"><pre>        &quot;&quot;&quot;</pre></li>
+                  
+              </ol>
+              
+            </div>
+          
+
+          
+            
+              <details>
+                <summary class="commands">Local vars</summary>
+            
+            <table class="vars" id="v281473439745280">
+              <thead>
+                <tr>
+                  <th>Variable</th>
+                  <th>Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                  <tr>
+                    <td>exc</td>
+                    <td class="code"><pre>TypeError(&quot;ViewInspector.__init__() got an unexpected keyword argument &#x27;urlconf&#x27;&quot;)</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>renderer_format</td>
+                    <td class="code"><pre>&#x27;yaml&#x27;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>request</td>
+                    <td class="code"><pre>&lt;rest_framework.request.Request: GET &#x27;/api/schema/&#x27;&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>self</td>
+                    <td class="code"><pre>&lt;drf_spectacular.views.SpectacularAPIView object at 0xffffa46177d0&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>use_plaintext_traceback</td>
+                    <td class="code"><pre>True</pre></td>
+                  </tr>
+                
+              </tbody>
+            </table>
+            </details>
+          
+        </li>
+      
+        
+        <li class="frame user">
+          
+            <code class="fname">/usr/local/lib/python3.11/site-packages/rest_framework/views.py</code>, line 506, in dispatch
+          
+
+          
+            <div class="context" id="c281473441509504">
+              
+                <ol start="499" class="pre-context" id="pre281473441509504">
+                
+                  <li onclick="toggle('pre281473441509504', 'post281473441509504')"><pre>            # Get the appropriate handler method</pre></li>
+                
+                  <li onclick="toggle('pre281473441509504', 'post281473441509504')"><pre>            if request.method.lower() in self.http_method_names:</pre></li>
+                
+                  <li onclick="toggle('pre281473441509504', 'post281473441509504')"><pre>                handler = getattr(self, request.method.lower(),</pre></li>
+                
+                  <li onclick="toggle('pre281473441509504', 'post281473441509504')"><pre>                                  self.http_method_not_allowed)</pre></li>
+                
+                  <li onclick="toggle('pre281473441509504', 'post281473441509504')"><pre>            else:</pre></li>
+                
+                  <li onclick="toggle('pre281473441509504', 'post281473441509504')"><pre>                handler = self.http_method_not_allowed</pre></li>
+                
+                  <li onclick="toggle('pre281473441509504', 'post281473441509504')"><pre></pre></li>
+                
+                </ol>
+              
+              <ol start="506" class="context-line">
+                <li onclick="toggle('pre281473441509504', 'post281473441509504')"><pre>            response = handler(request, *args, **kwargs)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre> <span>…</span></li>
+              </ol>
+              
+                <ol start='507' class="post-context" id="post281473441509504">
+                  
+                  <li onclick="toggle('pre281473441509504', 'post281473441509504')"><pre></pre></li>
+                  
+                  <li onclick="toggle('pre281473441509504', 'post281473441509504')"><pre>        except Exception as exc:</pre></li>
+                  
+                  <li onclick="toggle('pre281473441509504', 'post281473441509504')"><pre>            response = self.handle_exception(exc)</pre></li>
+                  
+                  <li onclick="toggle('pre281473441509504', 'post281473441509504')"><pre></pre></li>
+                  
+                  <li onclick="toggle('pre281473441509504', 'post281473441509504')"><pre>        self.response = self.finalize_response(request, response, *args, **kwargs)</pre></li>
+                  
+                  <li onclick="toggle('pre281473441509504', 'post281473441509504')"><pre>        return self.response</pre></li>
+                  
+              </ol>
+              
+            </div>
+          
+
+          
+            
+              <details>
+                <summary class="commands">Local vars</summary>
+            
+            <table class="vars" id="v281473441509504">
+              <thead>
+                <tr>
+                  <th>Variable</th>
+                  <th>Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                  <tr>
+                    <td>args</td>
+                    <td class="code"><pre>()</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>handler</td>
+                    <td class="code"><pre>&lt;bound method SpectacularAPIView.get of &lt;drf_spectacular.views.SpectacularAPIView object at 0xffffa46177d0&gt;&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>kwargs</td>
+                    <td class="code"><pre>{}</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>request</td>
+                    <td class="code"><pre>&lt;rest_framework.request.Request: GET &#x27;/api/schema/&#x27;&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>self</td>
+                    <td class="code"><pre>&lt;drf_spectacular.views.SpectacularAPIView object at 0xffffa46177d0&gt;</pre></td>
+                  </tr>
+                
+              </tbody>
+            </table>
+            </details>
+          
+        </li>
+      
+        
+        <li class="frame user">
+          
+            <code class="fname">/usr/local/lib/python3.11/site-packages/drf_spectacular/views.py</code>, line 83, in get
+          
+
+          
+            <div class="context" id="c281473439744896">
+              
+                <ol start="76" class="pre-context" id="pre281473439744896">
+                
+                  <li onclick="toggle('pre281473439744896', 'post281473439744896')"><pre>                self.urlconf = ModuleWrapper(tuple(self.urlconf))</pre></li>
+                
+                  <li onclick="toggle('pre281473439744896', 'post281473439744896')"><pre></pre></li>
+                
+                  <li onclick="toggle('pre281473439744896', 'post281473439744896')"><pre>        with patched_settings(self.custom_settings):</pre></li>
+                
+                  <li onclick="toggle('pre281473439744896', 'post281473439744896')"><pre>            if settings.USE_I18N and request.GET.get(&#x27;lang&#x27;):</pre></li>
+                
+                  <li onclick="toggle('pre281473439744896', 'post281473439744896')"><pre>                with translation.override(request.GET.get(&#x27;lang&#x27;)):</pre></li>
+                
+                  <li onclick="toggle('pre281473439744896', 'post281473439744896')"><pre>                    return self._get_schema_response(request)</pre></li>
+                
+                  <li onclick="toggle('pre281473439744896', 'post281473439744896')"><pre>            else:</pre></li>
+                
+                </ol>
+              
+              <ol start="83" class="context-line">
+                <li onclick="toggle('pre281473439744896', 'post281473439744896')"><pre>                return self._get_schema_response(request)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre> <span>…</span></li>
+              </ol>
+              
+                <ol start='84' class="post-context" id="post281473439744896">
+                  
+                  <li onclick="toggle('pre281473439744896', 'post281473439744896')"><pre></pre></li>
+                  
+                  <li onclick="toggle('pre281473439744896', 'post281473439744896')"><pre>    def _get_schema_response(self, request):</pre></li>
+                  
+                  <li onclick="toggle('pre281473439744896', 'post281473439744896')"><pre>        # version specified as parameter to the view always takes precedence. after</pre></li>
+                  
+                  <li onclick="toggle('pre281473439744896', 'post281473439744896')"><pre>        # that we try to source version through the schema view&#x27;s own versioning_class.</pre></li>
+                  
+                  <li onclick="toggle('pre281473439744896', 'post281473439744896')"><pre>        version = self.api_version or request.version or self._get_version_parameter(request)</pre></li>
+                  
+                  <li onclick="toggle('pre281473439744896', 'post281473439744896')"><pre>        generator = self.generator_class(urlconf=self.urlconf, api_version=version, patterns=self.patterns)</pre></li>
+                  
+              </ol>
+              
+            </div>
+          
+
+          
+            
+              <details>
+                <summary class="commands">Local vars</summary>
+            
+            <table class="vars" id="v281473439744896">
+              <thead>
+                <tr>
+                  <th>Variable</th>
+                  <th>Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                  <tr>
+                    <td>args</td>
+                    <td class="code"><pre>()</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>kwargs</td>
+                    <td class="code"><pre>{}</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>request</td>
+                    <td class="code"><pre>&lt;rest_framework.request.Request: GET &#x27;/api/schema/&#x27;&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>self</td>
+                    <td class="code"><pre>&lt;drf_spectacular.views.SpectacularAPIView object at 0xffffa46177d0&gt;</pre></td>
+                  </tr>
+                
+              </tbody>
+            </table>
+            </details>
+          
+        </li>
+      
+        
+        <li class="frame user">
+          
+            <code class="fname">/usr/local/lib/python3.11/site-packages/drf_spectacular/views.py</code>, line 89, in _get_schema_response
+          
+
+          
+            <div class="context" id="c281473439744960">
+              
+                <ol start="82" class="pre-context" id="pre281473439744960">
+                
+                  <li onclick="toggle('pre281473439744960', 'post281473439744960')"><pre>            else:</pre></li>
+                
+                  <li onclick="toggle('pre281473439744960', 'post281473439744960')"><pre>                return self._get_schema_response(request)</pre></li>
+                
+                  <li onclick="toggle('pre281473439744960', 'post281473439744960')"><pre></pre></li>
+                
+                  <li onclick="toggle('pre281473439744960', 'post281473439744960')"><pre>    def _get_schema_response(self, request):</pre></li>
+                
+                  <li onclick="toggle('pre281473439744960', 'post281473439744960')"><pre>        # version specified as parameter to the view always takes precedence. after</pre></li>
+                
+                  <li onclick="toggle('pre281473439744960', 'post281473439744960')"><pre>        # that we try to source version through the schema view&#x27;s own versioning_class.</pre></li>
+                
+                  <li onclick="toggle('pre281473439744960', 'post281473439744960')"><pre>        version = self.api_version or request.version or self._get_version_parameter(request)</pre></li>
+                
+                </ol>
+              
+              <ol start="89" class="context-line">
+                <li onclick="toggle('pre281473439744960', 'post281473439744960')"><pre>        generator = self.generator_class(urlconf=self.urlconf, api_version=version, patterns=self.patterns)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre> <span>…</span></li>
+              </ol>
+              
+                <ol start='90' class="post-context" id="post281473439744960">
+                  
+                  <li onclick="toggle('pre281473439744960', 'post281473439744960')"><pre>        return Response(</pre></li>
+                  
+                  <li onclick="toggle('pre281473439744960', 'post281473439744960')"><pre>            data=generator.get_schema(request=request, public=self.serve_public),</pre></li>
+                  
+                  <li onclick="toggle('pre281473439744960', 'post281473439744960')"><pre>            headers={&quot;Content-Disposition&quot;: f&#x27;inline; filename=&quot;{self._get_filename(request, version)}&quot;&#x27;}</pre></li>
+                  
+                  <li onclick="toggle('pre281473439744960', 'post281473439744960')"><pre>        )</pre></li>
+                  
+                  <li onclick="toggle('pre281473439744960', 'post281473439744960')"><pre></pre></li>
+                  
+                  <li onclick="toggle('pre281473439744960', 'post281473439744960')"><pre>    def _get_filename(self, request, version):</pre></li>
+                  
+              </ol>
+              
+            </div>
+          
+
+          
+            
+              <details>
+                <summary class="commands">Local vars</summary>
+            
+            <table class="vars" id="v281473439744960">
+              <thead>
+                <tr>
+                  <th>Variable</th>
+                  <th>Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                  <tr>
+                    <td>request</td>
+                    <td class="code"><pre>&lt;rest_framework.request.Request: GET &#x27;/api/schema/&#x27;&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>self</td>
+                    <td class="code"><pre>&lt;drf_spectacular.views.SpectacularAPIView object at 0xffffa46177d0&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>version</td>
+                    <td class="code"><pre>None</pre></td>
+                  </tr>
+                
+              </tbody>
+            </table>
+            </details>
+          
+        </li>
+      
+    </ul>
+  </div>
+
+  <form action="https://dpaste.com/" name="pasteform" id="pasteform" method="post">
+  <div id="pastebinTraceback" class="pastebin">
+    <input type="hidden" name="language" value="PythonConsole">
+    <input type="hidden" name="title"
+      value="TypeError at /api/schema/">
+    <input type="hidden" name="source" value="Django Dpaste Agent">
+    <input type="hidden" name="poster" value="Django">
+    <textarea name="content" id="traceback_area" cols="140" rows="25">
+Environment:
+
+
+Request Method: GET
+Request URL: http://localhost:8001/api/schema/
+
+Django Version: 4.2.7
+Python Version: 3.11.13
+Installed Applications:
+[&#x27;django.contrib.admin&#x27;,
+ &#x27;django.contrib.auth&#x27;,
+ &#x27;django.contrib.contenttypes&#x27;,
+ &#x27;django.contrib.sessions&#x27;,
+ &#x27;django.contrib.messages&#x27;,
+ &#x27;django.contrib.staticfiles&#x27;,
+ &#x27;rest_framework&#x27;,
+ &#x27;corsheaders&#x27;,
+ &#x27;django_filters&#x27;,
+ &#x27;drf_spectacular&#x27;,
+ &#x27;drf_spectacular_sidecar&#x27;,
+ &#x27;rest_framework_simplejwt&#x27;,
+ &#x27;django_extensions&#x27;,
+ &#x27;apps.cadastro&#x27;,
+ &#x27;apps.api&#x27;,
+ &#x27;authentication&#x27;]
+Installed Middleware:
+[&#x27;django.middleware.security.SecurityMiddleware&#x27;,
+ &#x27;whitenoise.middleware.WhiteNoiseMiddleware&#x27;,
+ &#x27;corsheaders.middleware.CorsMiddleware&#x27;,
+ &#x27;django.middleware.common.CommonMiddleware&#x27;,
+ &#x27;django.middleware.csrf.CsrfViewMiddleware&#x27;,
+ &#x27;django.contrib.sessions.middleware.SessionMiddleware&#x27;,
+ &#x27;django.contrib.auth.middleware.AuthenticationMiddleware&#x27;,
+ &#x27;django.contrib.messages.middleware.MessageMiddleware&#x27;,
+ &#x27;django.middleware.clickjacking.XFrameOptionsMiddleware&#x27;]
+
+
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+    ^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/drf_spectacular/views.py", line 83, in get
+    return self._get_schema_response(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/drf_spectacular/views.py", line 89, in _get_schema_response
+    generator = self.generator_class(urlconf=self.urlconf, api_version=version, patterns=self.patterns)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Exception Type: TypeError at /api/schema/
+Exception Value: ViewInspector.__init__() got an unexpected keyword argument &#x27;urlconf&#x27;
+</textarea>
+  <br><br>
+  <input type="submit" value="Share this traceback on a public website">
+  </div>
+</form>
+
+</div>
+
+
+<div id="requestinfo">
+  <h2>Request information</h2>
+
+
+  
+    <h3 id="user-info">USER</h3>
+    <p>AnonymousUser</p>
+  
+
+  <h3 id="get-info">GET</h3>
+  
+    <p>No GET data</p>
+  
+
+  <h3 id="post-info">POST</h3>
+  
+    <p>No POST data</p>
+  
+
+  <h3 id="files-info">FILES</h3>
+  
+    <p>No FILES data</p>
+  
+
+  <h3 id="cookie-info">COOKIES</h3>
+  
+    <p>No cookie data</p>
+  
+
+  <h3 id="meta-info">META</h3>
+  <table class="req">
+    <thead>
+      <tr>
+        <th>Variable</th>
+        <th>Value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr>
+          <td>HTTP_ACCEPT</td>
+          <td class="code"><pre>&#x27;*/*&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>HTTP_HOST</td>
+          <td class="code"><pre>&#x27;localhost:8001&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>HTTP_USER_AGENT</td>
+          <td class="code"><pre>&#x27;curl/7.76.1&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>PATH_INFO</td>
+          <td class="code"><pre>&#x27;/api/schema/&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>QUERY_STRING</td>
+          <td class="code"><pre>&#x27;&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>RAW_URI</td>
+          <td class="code"><pre>&#x27;/api/schema/&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>REMOTE_ADDR</td>
+          <td class="code"><pre>&#x27;172.30.0.1&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>REMOTE_PORT</td>
+          <td class="code"><pre>&#x27;47924&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>REQUEST_METHOD</td>
+          <td class="code"><pre>&#x27;GET&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SCRIPT_NAME</td>
+          <td class="code"><pre>&#x27;&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SERVER_NAME</td>
+          <td class="code"><pre>&#x27;0.0.0.0&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SERVER_PORT</td>
+          <td class="code"><pre>&#x27;8000&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SERVER_PROTOCOL</td>
+          <td class="code"><pre>&#x27;HTTP/1.1&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SERVER_SOFTWARE</td>
+          <td class="code"><pre>&#x27;gunicorn/21.2.0&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>gunicorn.socket</td>
+          <td class="code"><pre>&lt;socket.socket fd=9, family=2, type=1, proto=0, laddr=(&#x27;172.30.0.3&#x27;, 8000), raddr=(&#x27;172.30.0.1&#x27;, 47924)&gt;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>wsgi.errors</td>
+          <td class="code"><pre>&lt;gunicorn.http.wsgi.WSGIErrorsWrapper object at 0xffffa62fc730&gt;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>wsgi.file_wrapper</td>
+          <td class="code"><pre>&lt;class &#x27;gunicorn.http.wsgi.FileWrapper&#x27;&gt;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>wsgi.input</td>
+          <td class="code"><pre>&lt;gunicorn.http.body.Body object at 0xffffa46168d0&gt;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>wsgi.input_terminated</td>
+          <td class="code"><pre>True</pre></td>
+        </tr>
+      
+        <tr>
+          <td>wsgi.multiprocess</td>
+          <td class="code"><pre>True</pre></td>
+        </tr>
+      
+        <tr>
+          <td>wsgi.multithread</td>
+          <td class="code"><pre>False</pre></td>
+        </tr>
+      
+        <tr>
+          <td>wsgi.run_once</td>
+          <td class="code"><pre>False</pre></td>
+        </tr>
+      
+        <tr>
+          <td>wsgi.url_scheme</td>
+          <td class="code"><pre>&#x27;http&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>wsgi.version</td>
+          <td class="code"><pre>(1, 0)</pre></td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+  <h3 id="settings-info">Settings</h3>
+  <h4>Using settings module <code>config.settings</code></h4>
+  <table class="req">
+    <thead>
+      <tr>
+        <th>Setting</th>
+        <th>Value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr>
+          <td>ABSOLUTE_URL_OVERRIDES</td>
+          <td class="code"><pre>{}</pre></td>
+        </tr>
+      
+        <tr>
+          <td>ADMINS</td>
+          <td class="code"><pre>[]</pre></td>
+        </tr>
+      
+        <tr>
+          <td>ALLOWED_HOSTS</td>
+          <td class="code"><pre>[&#x27;localhost&#x27;, &#x27;127.0.0.1&#x27;, &#x27;10.13.65.37&#x27;, &#x27;seu-dominio.com&#x27;]</pre></td>
+        </tr>
+      
+        <tr>
+          <td>APPEND_SLASH</td>
+          <td class="code"><pre>True</pre></td>
+        </tr>
+      
+        <tr>
+          <td>AUTHENTICATION_BACKENDS</td>
+          <td class="code"><pre>[&#x27;django.contrib.auth.backends.ModelBackend&#x27;]</pre></td>
+        </tr>
+      
+        <tr>
+          <td>AUTH_PASSWORD_VALIDATORS</td>
+          <td class="code"><pre>&#x27;********************&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>AUTH_USER_MODEL</td>
+          <td class="code"><pre>&#x27;auth.User&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>BASE_DIR</td>
+          <td class="code"><pre>PosixPath(&#x27;/app&#x27;)</pre></td>
+        </tr>
+      
+        <tr>
+          <td>CACHES</td>
+          <td class="code"><pre>{&#x27;default&#x27;: {&#x27;BACKEND&#x27;: &#x27;django_redis.cache.RedisCache&#x27;,
+             &#x27;LOCATION&#x27;: &#x27;redis://redis:6379/0&#x27;,
+             &#x27;OPTIONS&#x27;: {&#x27;CLIENT_CLASS&#x27;: &#x27;django_redis.client.DefaultClient&#x27;}}}</pre></td>
+        </tr>
+      
+        <tr>
+          <td>CACHE_MIDDLEWARE_ALIAS</td>
+          <td class="code"><pre>&#x27;default&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>CACHE_MIDDLEWARE_KEY_PREFIX</td>
+          <td class="code"><pre>&#x27;********************&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>CACHE_MIDDLEWARE_SECONDS</td>
+          <td class="code"><pre>600</pre></td>
+        </tr>
+      
+        <tr>
+          <td>CORS_ALLOW_ALL_ORIGINS</td>
+          <td class="code"><pre>True</pre></td>
+        </tr>
+      
+        <tr>
+          <td>CORS_ALLOW_CREDENTIALS</td>
+          <td class="code"><pre>True</pre></td>
+        </tr>
+      
+        <tr>
+          <td>CORS_ALLOW_HEADERS</td>
+          <td class="code"><pre>[&#x27;accept&#x27;,
+ &#x27;accept-encoding&#x27;,
+ &#x27;authorization&#x27;,
+ &#x27;content-type&#x27;,
+ &#x27;dnt&#x27;,
+ &#x27;origin&#x27;,
+ &#x27;user-agent&#x27;,
+ &#x27;x-csrftoken&#x27;,
+ &#x27;x-requested-with&#x27;]</pre></td>
+        </tr>
+      
+        <tr>
+          <td>CORS_ALLOW_METHODS</td>
+          <td class="code"><pre>[&#x27;DELETE&#x27;, &#x27;GET&#x27;, &#x27;OPTIONS&#x27;, &#x27;PATCH&#x27;, &#x27;POST&#x27;, &#x27;PUT&#x27;]</pre></td>
+        </tr>
+      
+        <tr>
+          <td>CSRF_COOKIE_AGE</td>
+          <td class="code"><pre>31449600</pre></td>
+        </tr>
+      
+        <tr>
+          <td>CSRF_COOKIE_DOMAIN</td>
+          <td class="code"><pre>None</pre></td>
+        </tr>
+      
+        <tr>
+          <td>CSRF_COOKIE_HTTPONLY</td>
+          <td class="code"><pre>False</pre></td>
+        </tr>
+      
+        <tr>
+          <td>CSRF_COOKIE_MASKED</td>
+          <td class="code"><pre>False</pre></td>
+        </tr>
+      
+        <tr>
+          <td>CSRF_COOKIE_NAME</td>
+          <td class="code"><pre>&#x27;csrftoken&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>CSRF_COOKIE_PATH</td>
+          <td class="code"><pre>&#x27;/&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>CSRF_COOKIE_SAMESITE</td>
+          <td class="code"><pre>&#x27;Lax&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>CSRF_COOKIE_SECURE</td>
+          <td class="code"><pre>False</pre></td>
+        </tr>
+      
+        <tr>
+          <td>CSRF_FAILURE_VIEW</td>
+          <td class="code"><pre>&#x27;django.views.csrf.csrf_failure&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>CSRF_HEADER_NAME</td>
+          <td class="code"><pre>&#x27;HTTP_X_CSRFTOKEN&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>CSRF_TRUSTED_ORIGINS</td>
+          <td class="code"><pre>[]</pre></td>
+        </tr>
+      
+        <tr>
+          <td>CSRF_USE_SESSIONS</td>
+          <td class="code"><pre>False</pre></td>
+        </tr>
+      
+        <tr>
+          <td>DATABASES</td>
+          <td class="code"><pre>{&#x27;default&#x27;: {&#x27;ATOMIC_REQUESTS&#x27;: False,
+             &#x27;AUTOCOMMIT&#x27;: True,
+             &#x27;CONN_HEALTH_CHECKS&#x27;: False,
+             &#x27;CONN_MAX_AGE&#x27;: 0,
+             &#x27;DISABLE_SERVER_SIDE_CURSORS&#x27;: False,
+             &#x27;ENGINE&#x27;: &#x27;django.db.backends.postgresql&#x27;,
+             &#x27;HOST&#x27;: &#x27;10.13.66.8&#x27;,
+             &#x27;NAME&#x27;: &#x27;dev_cadastro_unificado&#x27;,
+             &#x27;OPTIONS&#x27;: {},
+             &#x27;PASSWORD&#x27;: &#x27;********************&#x27;,
+             &#x27;PORT&#x27;: 5432,
+             &#x27;TEST&#x27;: {&#x27;CHARSET&#x27;: None,
+                      &#x27;COLLATION&#x27;: None,
+                      &#x27;MIGRATE&#x27;: True,
+                      &#x27;MIRROR&#x27;: None,
+                      &#x27;NAME&#x27;: None},
+             &#x27;TIME_ZONE&#x27;: None,
+             &#x27;USER&#x27;: &#x27;robertogeiss&#x27;}}</pre></td>
+        </tr>
+      
+        <tr>
+          <td>DATABASE_ROUTERS</td>
+          <td class="code"><pre>[&#x27;config.settings.DatabaseRouter&#x27;]</pre></td>
+        </tr>
+      
+        <tr>
+          <td>DATA_UPLOAD_MAX_MEMORY_SIZE</td>
+          <td class="code"><pre>2621440</pre></td>
+        </tr>
+      
+        <tr>
+          <td>DATA_UPLOAD_MAX_NUMBER_FIELDS</td>
+          <td class="code"><pre>1000</pre></td>
+        </tr>
+      
+        <tr>
+          <td>DATA_UPLOAD_MAX_NUMBER_FILES</td>
+          <td class="code"><pre>100</pre></td>
+        </tr>
+      
+        <tr>
+          <td>DATETIME_FORMAT</td>
+          <td class="code"><pre>&#x27;N j, Y, P&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>DATETIME_INPUT_FORMATS</td>
+          <td class="code"><pre>[&#x27;%Y-%m-%d %H:%M:%S&#x27;,
+ &#x27;%Y-%m-%d %H:%M:%S.%f&#x27;,
+ &#x27;%Y-%m-%d %H:%M&#x27;,
+ &#x27;%m/%d/%Y %H:%M:%S&#x27;,
+ &#x27;%m/%d/%Y %H:%M:%S.%f&#x27;,
+ &#x27;%m/%d/%Y %H:%M&#x27;,
+ &#x27;%m/%d/%y %H:%M:%S&#x27;,
+ &#x27;%m/%d/%y %H:%M:%S.%f&#x27;,
+ &#x27;%m/%d/%y %H:%M&#x27;]</pre></td>
+        </tr>
+      
+        <tr>
+          <td>DATE_FORMAT</td>
+          <td class="code"><pre>&#x27;N j, Y&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>DATE_INPUT_FORMATS</td>
+          <td class="code"><pre>[&#x27;%Y-%m-%d&#x27;,
+ &#x27;%m/%d/%Y&#x27;,
+ &#x27;%m/%d/%y&#x27;,
+ &#x27;%b %d %Y&#x27;,
+ &#x27;%b %d, %Y&#x27;,
+ &#x27;%d %b %Y&#x27;,
+ &#x27;%d %b, %Y&#x27;,
+ &#x27;%B %d %Y&#x27;,
+ &#x27;%B %d, %Y&#x27;,
+ &#x27;%d %B %Y&#x27;,
+ &#x27;%d %B, %Y&#x27;]</pre></td>
+        </tr>
+      
+        <tr>
+          <td>DEBUG</td>
+          <td class="code"><pre>True</pre></td>
+        </tr>
+      
+        <tr>
+          <td>DEBUG_PROPAGATE_EXCEPTIONS</td>
+          <td class="code"><pre>False</pre></td>
+        </tr>
+      
+        <tr>
+          <td>DECIMAL_SEPARATOR</td>
+          <td class="code"><pre>&#x27;.&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>DEFAULT_AUTO_FIELD</td>
+          <td class="code"><pre>&#x27;django.db.models.BigAutoField&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>DEFAULT_CHARSET</td>
+          <td class="code"><pre>&#x27;utf-8&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>DEFAULT_EXCEPTION_REPORTER</td>
+          <td class="code"><pre>&#x27;django.views.debug.ExceptionReporter&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>DEFAULT_EXCEPTION_REPORTER_FILTER</td>
+          <td class="code"><pre>&#x27;django.views.debug.SafeExceptionReporterFilter&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>DEFAULT_FILE_STORAGE</td>
+          <td class="code"><pre>&#x27;django.core.files.storage.FileSystemStorage&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>DEFAULT_FROM_EMAIL</td>
+          <td class="code"><pre>&#x27;webmaster@localhost&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>DEFAULT_INDEX_TABLESPACE</td>
+          <td class="code"><pre>&#x27;&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>DEFAULT_TABLESPACE</td>
+          <td class="code"><pre>&#x27;&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>DISALLOWED_USER_AGENTS</td>
+          <td class="code"><pre>[]</pre></td>
+        </tr>
+      
+        <tr>
+          <td>EMAIL_BACKEND</td>
+          <td class="code"><pre>&#x27;django.core.mail.backends.smtp.EmailBackend&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>EMAIL_HOST</td>
+          <td class="code"><pre>&#x27;localhost&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>EMAIL_HOST_PASSWORD</td>
+          <td class="code"><pre>&#x27;********************&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>EMAIL_HOST_USER</td>
+          <td class="code"><pre>&#x27;&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>EMAIL_PORT</td>
+          <td class="code"><pre>25</pre></td>
+        </tr>
+      
+        <tr>
+          <td>EMAIL_SSL_CERTFILE</td>
+          <td class="code"><pre>None</pre></td>
+        </tr>
+      
+        <tr>
+          <td>EMAIL_SSL_KEYFILE</td>
+          <td class="code"><pre>&#x27;********************&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>EMAIL_SUBJECT_PREFIX</td>
+          <td class="code"><pre>&#x27;[Django] &#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>EMAIL_TIMEOUT</td>
+          <td class="code"><pre>None</pre></td>
+        </tr>
+      
+        <tr>
+          <td>EMAIL_USE_LOCALTIME</td>
+          <td class="code"><pre>False</pre></td>
+        </tr>
+      
+        <tr>
+          <td>EMAIL_USE_SSL</td>
+          <td class="code"><pre>False</pre></td>
+        </tr>
+      
+        <tr>
+          <td>EMAIL_USE_TLS</td>
+          <td class="code"><pre>False</pre></td>
+        </tr>
+      
+        <tr>
+          <td>FILE_UPLOAD_DIRECTORY_PERMISSIONS</td>
+          <td class="code"><pre>None</pre></td>
+        </tr>
+      
+        <tr>
+          <td>FILE_UPLOAD_HANDLERS</td>
+          <td class="code"><pre>[&#x27;django.core.files.uploadhandler.MemoryFileUploadHandler&#x27;,
+ &#x27;django.core.files.uploadhandler.TemporaryFileUploadHandler&#x27;]</pre></td>
+        </tr>
+      
+        <tr>
+          <td>FILE_UPLOAD_MAX_MEMORY_SIZE</td>
+          <td class="code"><pre>2621440</pre></td>
+        </tr>
+      
+        <tr>
+          <td>FILE_UPLOAD_PERMISSIONS</td>
+          <td class="code"><pre>420</pre></td>
+        </tr>
+      
+        <tr>
+          <td>FILE_UPLOAD_TEMP_DIR</td>
+          <td class="code"><pre>None</pre></td>
+        </tr>
+      
+        <tr>
+          <td>FIRST_DAY_OF_WEEK</td>
+          <td class="code"><pre>0</pre></td>
+        </tr>
+      
+        <tr>
+          <td>FIXTURE_DIRS</td>
+          <td class="code"><pre>[]</pre></td>
+        </tr>
+      
+        <tr>
+          <td>FORCE_SCRIPT_NAME</td>
+          <td class="code"><pre>None</pre></td>
+        </tr>
+      
+        <tr>
+          <td>FORMAT_MODULE_PATH</td>
+          <td class="code"><pre>None</pre></td>
+        </tr>
+      
+        <tr>
+          <td>FORM_RENDERER</td>
+          <td class="code"><pre>&#x27;django.forms.renderers.DjangoTemplates&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>IGNORABLE_404_URLS</td>
+          <td class="code"><pre>[]</pre></td>
+        </tr>
+      
+        <tr>
+          <td>INSTALLED_APPS</td>
+          <td class="code"><pre>[&#x27;django.contrib.admin&#x27;,
+ &#x27;django.contrib.auth&#x27;,
+ &#x27;django.contrib.contenttypes&#x27;,
+ &#x27;django.contrib.sessions&#x27;,
+ &#x27;django.contrib.messages&#x27;,
+ &#x27;django.contrib.staticfiles&#x27;,
+ &#x27;rest_framework&#x27;,
+ &#x27;corsheaders&#x27;,
+ &#x27;django_filters&#x27;,
+ &#x27;drf_spectacular&#x27;,
+ &#x27;drf_spectacular_sidecar&#x27;,
+ &#x27;rest_framework_simplejwt&#x27;,
+ &#x27;django_extensions&#x27;,
+ &#x27;apps.cadastro&#x27;,
+ &#x27;apps.api&#x27;,
+ &#x27;authentication&#x27;]</pre></td>
+        </tr>
+      
+        <tr>
+          <td>INTERNAL_IPS</td>
+          <td class="code"><pre>[]</pre></td>
+        </tr>
+      
+        <tr>
+          <td>LANGUAGES</td>
+          <td class="code"><pre>[(&#x27;af&#x27;, &#x27;Afrikaans&#x27;),
+ (&#x27;ar&#x27;, &#x27;Arabic&#x27;),
+ (&#x27;ar-dz&#x27;, &#x27;Algerian Arabic&#x27;),
+ (&#x27;ast&#x27;, &#x27;Asturian&#x27;),
+ (&#x27;az&#x27;, &#x27;Azerbaijani&#x27;),
+ (&#x27;bg&#x27;, &#x27;Bulgarian&#x27;),
+ (&#x27;be&#x27;, &#x27;Belarusian&#x27;),
+ (&#x27;bn&#x27;, &#x27;Bengali&#x27;),
+ (&#x27;br&#x27;, &#x27;Breton&#x27;),
+ (&#x27;bs&#x27;, &#x27;Bosnian&#x27;),
+ (&#x27;ca&#x27;, &#x27;Catalan&#x27;),
+ (&#x27;ckb&#x27;, &#x27;Central Kurdish (Sorani)&#x27;),
+ (&#x27;cs&#x27;, &#x27;Czech&#x27;),
+ (&#x27;cy&#x27;, &#x27;Welsh&#x27;),
+ (&#x27;da&#x27;, &#x27;Danish&#x27;),
+ (&#x27;de&#x27;, &#x27;German&#x27;),
+ (&#x27;dsb&#x27;, &#x27;Lower Sorbian&#x27;),
+ (&#x27;el&#x27;, &#x27;Greek&#x27;),
+ (&#x27;en&#x27;, &#x27;English&#x27;),
+ (&#x27;en-au&#x27;, &#x27;Australian English&#x27;),
+ (&#x27;en-gb&#x27;, &#x27;British English&#x27;),
+ (&#x27;eo&#x27;, &#x27;Esperanto&#x27;),
+ (&#x27;es&#x27;, &#x27;Spanish&#x27;),
+ (&#x27;es-ar&#x27;, &#x27;Argentinian Spanish&#x27;),
+ (&#x27;es-co&#x27;, &#x27;Colombian Spanish&#x27;),
+ (&#x27;es-mx&#x27;, &#x27;Mexican Spanish&#x27;),
+ (&#x27;es-ni&#x27;, &#x27;Nicaraguan Spanish&#x27;),
+ (&#x27;es-ve&#x27;, &#x27;Venezuelan Spanish&#x27;),
+ (&#x27;et&#x27;, &#x27;Estonian&#x27;),
+ (&#x27;eu&#x27;, &#x27;Basque&#x27;),
+ (&#x27;fa&#x27;, &#x27;Persian&#x27;),
+ (&#x27;fi&#x27;, &#x27;Finnish&#x27;),
+ (&#x27;fr&#x27;, &#x27;French&#x27;),
+ (&#x27;fy&#x27;, &#x27;Frisian&#x27;),
+ (&#x27;ga&#x27;, &#x27;Irish&#x27;),
+ (&#x27;gd&#x27;, &#x27;Scottish Gaelic&#x27;),
+ (&#x27;gl&#x27;, &#x27;Galician&#x27;),
+ (&#x27;he&#x27;, &#x27;Hebrew&#x27;),
+ (&#x27;hi&#x27;, &#x27;Hindi&#x27;),
+ (&#x27;hr&#x27;, &#x27;Croatian&#x27;),
+ (&#x27;hsb&#x27;, &#x27;Upper Sorbian&#x27;),
+ (&#x27;hu&#x27;, &#x27;Hungarian&#x27;),
+ (&#x27;hy&#x27;, &#x27;Armenian&#x27;),
+ (&#x27;ia&#x27;, &#x27;Interlingua&#x27;),
+ (&#x27;id&#x27;, &#x27;Indonesian&#x27;),
+ (&#x27;ig&#x27;, &#x27;Igbo&#x27;),
+ (&#x27;io&#x27;, &#x27;Ido&#x27;),
+ (&#x27;is&#x27;, &#x27;Icelandic&#x27;),
+ (&#x27;it&#x27;, &#x27;Italian&#x27;),
+ (&#x27;ja&#x27;, &#x27;Japanese&#x27;),
+ (&#x27;ka&#x27;, &#x27;Georgian&#x27;),
+ (&#x27;kab&#x27;, &#x27;Kabyle&#x27;),
+ (&#x27;kk&#x27;, &#x27;Kazakh&#x27;),
+ (&#x27;km&#x27;, &#x27;Khmer&#x27;),
+ (&#x27;kn&#x27;, &#x27;Kannada&#x27;),
+ (&#x27;ko&#x27;, &#x27;Korean&#x27;),
+ (&#x27;ky&#x27;, &#x27;Kyrgyz&#x27;),
+ (&#x27;lb&#x27;, &#x27;Luxembourgish&#x27;),
+ (&#x27;lt&#x27;, &#x27;Lithuanian&#x27;),
+ (&#x27;lv&#x27;, &#x27;Latvian&#x27;),
+ (&#x27;mk&#x27;, &#x27;Macedonian&#x27;),
+ (&#x27;ml&#x27;, &#x27;Malayalam&#x27;),
+ (&#x27;mn&#x27;, &#x27;Mongolian&#x27;),
+ (&#x27;mr&#x27;, &#x27;Marathi&#x27;),
+ (&#x27;ms&#x27;, &#x27;Malay&#x27;),
+ (&#x27;my&#x27;, &#x27;Burmese&#x27;),
+ (&#x27;nb&#x27;, &#x27;Norwegian Bokmål&#x27;),
+ (&#x27;ne&#x27;, &#x27;Nepali&#x27;),
+ (&#x27;nl&#x27;, &#x27;Dutch&#x27;),
+ (&#x27;nn&#x27;, &#x27;Norwegian Nynorsk&#x27;),
+ (&#x27;os&#x27;, &#x27;Ossetic&#x27;),
+ (&#x27;pa&#x27;, &#x27;Punjabi&#x27;),
+ (&#x27;pl&#x27;, &#x27;Polish&#x27;),
+ (&#x27;pt&#x27;, &#x27;Portuguese&#x27;),
+ (&#x27;pt-br&#x27;, &#x27;Brazilian Portuguese&#x27;),
+ (&#x27;ro&#x27;, &#x27;Romanian&#x27;),
+ (&#x27;ru&#x27;, &#x27;Russian&#x27;),
+ (&#x27;sk&#x27;, &#x27;Slovak&#x27;),
+ (&#x27;sl&#x27;, &#x27;Slovenian&#x27;),
+ (&#x27;sq&#x27;, &#x27;Albanian&#x27;),
+ (&#x27;sr&#x27;, &#x27;Serbian&#x27;),
+ (&#x27;sr-latn&#x27;, &#x27;Serbian Latin&#x27;),
+ (&#x27;sv&#x27;, &#x27;Swedish&#x27;),
+ (&#x27;sw&#x27;, &#x27;Swahili&#x27;),
+ (&#x27;ta&#x27;, &#x27;Tamil&#x27;),
+ (&#x27;te&#x27;, &#x27;Telugu&#x27;),
+ (&#x27;tg&#x27;, &#x27;Tajik&#x27;),
+ (&#x27;th&#x27;, &#x27;Thai&#x27;),
+ (&#x27;tk&#x27;, &#x27;Turkmen&#x27;),
+ (&#x27;tr&#x27;, &#x27;Turkish&#x27;),
+ (&#x27;tt&#x27;, &#x27;Tatar&#x27;),
+ (&#x27;udm&#x27;, &#x27;Udmurt&#x27;),
+ (&#x27;uk&#x27;, &#x27;Ukrainian&#x27;),
+ (&#x27;ur&#x27;, &#x27;Urdu&#x27;),
+ (&#x27;uz&#x27;, &#x27;Uzbek&#x27;),
+ (&#x27;vi&#x27;, &#x27;Vietnamese&#x27;),
+ (&#x27;zh-hans&#x27;, &#x27;Simplified Chinese&#x27;),
+ (&#x27;zh-hant&#x27;, &#x27;Traditional Chinese&#x27;)]</pre></td>
+        </tr>
+      
+        <tr>
+          <td>LANGUAGES_BIDI</td>
+          <td class="code"><pre>[&#x27;he&#x27;, &#x27;ar&#x27;, &#x27;ar-dz&#x27;, &#x27;ckb&#x27;, &#x27;fa&#x27;, &#x27;ur&#x27;]</pre></td>
+        </tr>
+      
+        <tr>
+          <td>LANGUAGE_CODE</td>
+          <td class="code"><pre>&#x27;pt-br&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>LANGUAGE_COOKIE_AGE</td>
+          <td class="code"><pre>None</pre></td>
+        </tr>
+      
+        <tr>
+          <td>LANGUAGE_COOKIE_DOMAIN</td>
+          <td class="code"><pre>None</pre></td>
+        </tr>
+      
+        <tr>
+          <td>LANGUAGE_COOKIE_HTTPONLY</td>
+          <td class="code"><pre>False</pre></td>
+        </tr>
+      
+        <tr>
+          <td>LANGUAGE_COOKIE_NAME</td>
+          <td class="code"><pre>&#x27;django_language&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>LANGUAGE_COOKIE_PATH</td>
+          <td class="code"><pre>&#x27;/&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>LANGUAGE_COOKIE_SAMESITE</td>
+          <td class="code"><pre>None</pre></td>
+        </tr>
+      
+        <tr>
+          <td>LANGUAGE_COOKIE_SECURE</td>
+          <td class="code"><pre>False</pre></td>
+        </tr>
+      
+        <tr>
+          <td>LOCALE_PATHS</td>
+          <td class="code"><pre>[]</pre></td>
+        </tr>
+      
+        <tr>
+          <td>LOGGING</td>
+          <td class="code"><pre>{&#x27;disable_existing_loggers&#x27;: False,
+ &#x27;handlers&#x27;: {&#x27;console&#x27;: {&#x27;class&#x27;: &#x27;logging.StreamHandler&#x27;}},
+ &#x27;loggers&#x27;: {&#x27;django&#x27;: {&#x27;handlers&#x27;: [&#x27;console&#x27;],
+                        &#x27;level&#x27;: &#x27;DEBUG&#x27;,
+                        &#x27;propagate&#x27;: False},
+             &#x27;drf_spectacular&#x27;: {&#x27;handlers&#x27;: [&#x27;console&#x27;],
+                                 &#x27;level&#x27;: &#x27;DEBUG&#x27;,
+                                 &#x27;propagate&#x27;: False}},
+ &#x27;root&#x27;: {&#x27;handlers&#x27;: [&#x27;console&#x27;], &#x27;level&#x27;: &#x27;INFO&#x27;},
+ &#x27;version&#x27;: 1}</pre></td>
+        </tr>
+      
+        <tr>
+          <td>LOGGING_CONFIG</td>
+          <td class="code"><pre>&#x27;logging.config.dictConfig&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>LOGIN_REDIRECT_URL</td>
+          <td class="code"><pre>&#x27;/accounts/profile/&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>LOGIN_URL</td>
+          <td class="code"><pre>&#x27;/accounts/login/&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>LOGOUT_REDIRECT_URL</td>
+          <td class="code"><pre>None</pre></td>
+        </tr>
+      
+        <tr>
+          <td>MANAGERS</td>
+          <td class="code"><pre>[]</pre></td>
+        </tr>
+      
+        <tr>
+          <td>MEDIA_ROOT</td>
+          <td class="code"><pre>PosixPath(&#x27;/app/media&#x27;)</pre></td>
+        </tr>
+      
+        <tr>
+          <td>MEDIA_URL</td>
+          <td class="code"><pre>&#x27;/media/&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>MESSAGE_STORAGE</td>
+          <td class="code"><pre>&#x27;django.contrib.messages.storage.fallback.FallbackStorage&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>MIDDLEWARE</td>
+          <td class="code"><pre>[&#x27;django.middleware.security.SecurityMiddleware&#x27;,
+ &#x27;whitenoise.middleware.WhiteNoiseMiddleware&#x27;,
+ &#x27;corsheaders.middleware.CorsMiddleware&#x27;,
+ &#x27;django.middleware.common.CommonMiddleware&#x27;,
+ &#x27;django.middleware.csrf.CsrfViewMiddleware&#x27;,
+ &#x27;django.contrib.sessions.middleware.SessionMiddleware&#x27;,
+ &#x27;django.contrib.auth.middleware.AuthenticationMiddleware&#x27;,
+ &#x27;django.contrib.messages.middleware.MessageMiddleware&#x27;,
+ &#x27;django.middleware.clickjacking.XFrameOptionsMiddleware&#x27;]</pre></td>
+        </tr>
+      
+        <tr>
+          <td>MIGRATION_MODULES</td>
+          <td class="code"><pre>{}</pre></td>
+        </tr>
+      
+        <tr>
+          <td>MONTH_DAY_FORMAT</td>
+          <td class="code"><pre>&#x27;F j&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>NUMBER_GROUPING</td>
+          <td class="code"><pre>0</pre></td>
+        </tr>
+      
+        <tr>
+          <td>PASSWORD_HASHERS</td>
+          <td class="code"><pre>&#x27;********************&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>PASSWORD_RESET_TIMEOUT</td>
+          <td class="code"><pre>&#x27;********************&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>PREPEND_WWW</td>
+          <td class="code"><pre>False</pre></td>
+        </tr>
+      
+        <tr>
+          <td>REST_FRAMEWORK</td>
+          <td class="code"><pre>{&#x27;COERCE_DECIMAL_TO_STRING&#x27;: True,
+ &#x27;COMPACT_JSON&#x27;: False,
+ &#x27;DATETIME_FORMAT&#x27;: &#x27;%Y-%m-%d %H:%M:%S&#x27;,
+ &#x27;DATE_FORMAT&#x27;: &#x27;%Y-%m-%d&#x27;,
+ &#x27;DEFAULT_AUTHENTICATION_CLASSES&#x27;: [&#x27;rest_framework_simplejwt.authentication.JWTAuthentication&#x27;],
+ &#x27;DEFAULT_FILTER_BACKENDS&#x27;: [&#x27;django_filters.rest_framework.DjangoFilterBackend&#x27;,
+                             &#x27;rest_framework.filters.SearchFilter&#x27;,
+                             &#x27;rest_framework.filters.OrderingFilter&#x27;],
+ &#x27;DEFAULT_PAGINATION_CLASS&#x27;: &#x27;rest_framework.pagination.PageNumberPagination&#x27;,
+ &#x27;DEFAULT_PERMISSION_CLASSES&#x27;: [&#x27;rest_framework.permissions.IsAuthenticated&#x27;],
+ &#x27;DEFAULT_RENDERER_CLASSES&#x27;: [&#x27;rest_framework.renderers.JSONRenderer&#x27;],
+ &#x27;DEFAULT_SCHEMA_CLASS&#x27;: &#x27;drf_spectacular.openapi.AutoSchema&#x27;,
+ &#x27;DEFAULT_THROTTLE_CLASSES&#x27;: [&#x27;rest_framework.throttling.UserRateThrottle&#x27;,
+                              &#x27;rest_framework.throttling.AnonRateThrottle&#x27;],
+ &#x27;DEFAULT_THROTTLE_RATES&#x27;: {&#x27;anon&#x27;: &#x27;100/hour&#x27;, &#x27;user&#x27;: &#x27;1000/hour&#x27;},
+ &#x27;EXCEPTION_HANDLER&#x27;: &#x27;rest_framework.views.exception_handler&#x27;,
+ &#x27;PAGE_SIZE&#x27;: 20,
+ &#x27;TIME_FORMAT&#x27;: &#x27;%H:%M:%S&#x27;,
+ &#x27;UNICODE_JSON&#x27;: False,
+ &#x27;UPLOADED_FILES_USE_URL&#x27;: True}</pre></td>
+        </tr>
+      
+        <tr>
+          <td>ROOT_URLCONF</td>
+          <td class="code"><pre>&#x27;config.urls&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SECRET_KEY</td>
+          <td class="code"><pre>&#x27;********************&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SECRET_KEY_FALLBACKS</td>
+          <td class="code"><pre>&#x27;********************&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SECURE_CONTENT_TYPE_NOSNIFF</td>
+          <td class="code"><pre>True</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SECURE_CROSS_ORIGIN_OPENER_POLICY</td>
+          <td class="code"><pre>&#x27;same-origin&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SECURE_HSTS_INCLUDE_SUBDOMAINS</td>
+          <td class="code"><pre>False</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SECURE_HSTS_PRELOAD</td>
+          <td class="code"><pre>False</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SECURE_HSTS_SECONDS</td>
+          <td class="code"><pre>0</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SECURE_PROXY_SSL_HEADER</td>
+          <td class="code"><pre>None</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SECURE_REDIRECT_EXEMPT</td>
+          <td class="code"><pre>[]</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SECURE_REFERRER_POLICY</td>
+          <td class="code"><pre>&#x27;same-origin&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SECURE_SSL_HOST</td>
+          <td class="code"><pre>None</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SECURE_SSL_REDIRECT</td>
+          <td class="code"><pre>False</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SERVER_EMAIL</td>
+          <td class="code"><pre>&#x27;root@localhost&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SESSION_CACHE_ALIAS</td>
+          <td class="code"><pre>&#x27;default&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SESSION_COOKIE_AGE</td>
+          <td class="code"><pre>1209600</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SESSION_COOKIE_DOMAIN</td>
+          <td class="code"><pre>None</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SESSION_COOKIE_HTTPONLY</td>
+          <td class="code"><pre>True</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SESSION_COOKIE_NAME</td>
+          <td class="code"><pre>&#x27;sessionid&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SESSION_COOKIE_PATH</td>
+          <td class="code"><pre>&#x27;/&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SESSION_COOKIE_SAMESITE</td>
+          <td class="code"><pre>&#x27;Lax&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SESSION_COOKIE_SECURE</td>
+          <td class="code"><pre>False</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SESSION_ENGINE</td>
+          <td class="code"><pre>&#x27;django.contrib.sessions.backends.db&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SESSION_EXPIRE_AT_BROWSER_CLOSE</td>
+          <td class="code"><pre>False</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SESSION_FILE_PATH</td>
+          <td class="code"><pre>None</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SESSION_SAVE_EVERY_REQUEST</td>
+          <td class="code"><pre>False</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SESSION_SERIALIZER</td>
+          <td class="code"><pre>&#x27;django.contrib.sessions.serializers.JSONSerializer&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SETTINGS_MODULE</td>
+          <td class="code"><pre>&#x27;config.settings&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SHORT_DATETIME_FORMAT</td>
+          <td class="code"><pre>&#x27;m/d/Y P&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SHORT_DATE_FORMAT</td>
+          <td class="code"><pre>&#x27;m/d/Y&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SIGNING_BACKEND</td>
+          <td class="code"><pre>&#x27;django.core.signing.TimestampSigner&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SILENCED_SYSTEM_CHECKS</td>
+          <td class="code"><pre>[]</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SIMPLE_JWT</td>
+          <td class="code"><pre>{&#x27;ACCESS_TOKEN_LIFETIME&#x27;: &#x27;********************&#x27;,
+ &#x27;ALGORITHM&#x27;: &#x27;HS256&#x27;,
+ &#x27;AUDIENCE&#x27;: None,
+ &#x27;AUTH_HEADER_NAME&#x27;: &#x27;HTTP_AUTHORIZATION&#x27;,
+ &#x27;AUTH_HEADER_TYPES&#x27;: (&#x27;Bearer&#x27;,),
+ &#x27;AUTH_TOKEN_CLASSES&#x27;: &#x27;********************&#x27;,
+ &#x27;BLACKLIST_AFTER_ROTATION&#x27;: True,
+ &#x27;ISSUER&#x27;: None,
+ &#x27;JTI_CLAIM&#x27;: &#x27;jti&#x27;,
+ &#x27;REFRESH_TOKEN_LIFETIME&#x27;: &#x27;********************&#x27;,
+ &#x27;ROTATE_REFRESH_TOKENS&#x27;: &#x27;********************&#x27;,
+ &#x27;SIGNING_KEY&#x27;: &#x27;********************&#x27;,
+ &#x27;SLIDING_TOKEN_LIFETIME&#x27;: &#x27;********************&#x27;,
+ &#x27;SLIDING_TOKEN_REFRESH_EXP_CLAIM&#x27;: &#x27;********************&#x27;,
+ &#x27;SLIDING_TOKEN_REFRESH_LIFETIME&#x27;: &#x27;********************&#x27;,
+ &#x27;TOKEN_TYPE_CLAIM&#x27;: &#x27;********************&#x27;,
+ &#x27;TOKEN_USER_CLASS&#x27;: &#x27;********************&#x27;,
+ &#x27;UPDATE_LAST_LOGIN&#x27;: True,
+ &#x27;USER_ID_CLAIM&#x27;: &#x27;user_id&#x27;,
+ &#x27;USER_ID_FIELD&#x27;: &#x27;id&#x27;,
+ &#x27;VERIFYING_KEY&#x27;: &#x27;********************&#x27;}</pre></td>
+        </tr>
+      
+        <tr>
+          <td>SPECTACULAR_SETTINGS</td>
+          <td class="code"><pre>{&#x27;AUTHENTICATION_WHITELIST&#x27;: [],
+ &#x27;CAMELIZE_NAMES&#x27;: False,
+ &#x27;COMPONENT_SPLIT_REQUEST&#x27;: True,
+ &#x27;CONTACT&#x27;: {&#x27;email&#x27;: &#x27;support@cadastrounificado.com&#x27;, &#x27;name&#x27;: &#x27;API Support&#x27;},
+ &#x27;DEFAULT_GENERATOR_CLASS&#x27;: &#x27;drf_spectacular.openapi.AutoSchema&#x27;,
+ &#x27;DESCRIPTION&#x27;: &#x27;API para integração com banco de dados de cadastro unificado&#x27;,
+ &#x27;DISABLE_ERRORS_AND_WARNINGS&#x27;: False,
+ &#x27;ENUM_NAME_OVERRIDES&#x27;: {},
+ &#x27;GENERIC_ADDITIONAL_PROPERTIES&#x27;: &#x27;dict&#x27;,
+ &#x27;LICENSE&#x27;: {&#x27;name&#x27;: &#x27;MIT License&#x27;,
+             &#x27;url&#x27;: &#x27;https://opensource.org/licenses/MIT&#x27;},
+ &#x27;POSTPROCESSING_HOOKS&#x27;: [],
+ &#x27;PREPROCESSING_HOOKS&#x27;: [],
+ &#x27;REDOC_DIST&#x27;: &#x27;SIDECAR&#x27;,
+ &#x27;SCHEMA_COERCE_METHOD_NAMES&#x27;: {&#x27;create&#x27;: &#x27;create&#x27;,
+                                &#x27;destroy&#x27;: &#x27;delete&#x27;,
+                                &#x27;list&#x27;: &#x27;list&#x27;,
+                                &#x27;partial_update&#x27;: &#x27;partial_update&#x27;,
+                                &#x27;retrieve&#x27;: &#x27;get&#x27;,
+                                &#x27;update&#x27;: &#x27;update&#x27;},
+ &#x27;SCHEMA_COERCE_PATH_PK&#x27;: True,
+ &#x27;SCHEMA_PATH_PREFIX&#x27;: &#x27;/api/&#x27;,
+ &#x27;SCHEMA_PATH_PREFIX_INSERT&#x27;: &#x27;&#x27;,
+ &#x27;SCHEMA_PATH_PREFIX_TRIM&#x27;: True,
+ &#x27;SERVERS&#x27;: [{&#x27;description&#x27;: &#x27;Development server&#x27;,
+              &#x27;url&#x27;: &#x27;http://10.13.65.37:8001&#x27;},
+             {&#x27;description&#x27;: &#x27;Development server (Nginx)&#x27;,
+              &#x27;url&#x27;: &#x27;http://10.13.65.37:8081&#x27;}],
+ &#x27;SERVE_AUTHENTICATION&#x27;: None,
+ &#x27;SERVE_INCLUDE_SCHEMA&#x27;: False,
+ &#x27;SERVE_PERMISSIONS&#x27;: [&#x27;rest_framework.permissions.AllowAny&#x27;],
+ &#x27;SORT_OPERATIONS&#x27;: False,
+ &#x27;SWAGGER_UI_DIST&#x27;: &#x27;SIDECAR&#x27;,
+ &#x27;SWAGGER_UI_FAVICON_HREF&#x27;: &#x27;SIDECAR&#x27;,
+ &#x27;SWAGGER_UI_SETTINGS&#x27;: {&#x27;deepLinking&#x27;: True,
+                         &#x27;displayOperationId&#x27;: False,
+                         &#x27;persistAuthorization&#x27;: True},
+ &#x27;TAGS&#x27;: [{&#x27;description&#x27;: &#x27;Endpoints de autenticação e autorização&#x27;,
+           &#x27;name&#x27;: &#x27;Authentication&#x27;},
+          {&#x27;description&#x27;: &#x27;Endpoints de cadastro de responsáveis, membros e &#x27;
+                          &#x27;demandas&#x27;,
+           &#x27;name&#x27;: &#x27;Cadastro&#x27;},
+          {&#x27;description&#x27;: &#x27;Endpoints do sistema (health check, info)&#x27;,
+           &#x27;name&#x27;: &#x27;System&#x27;}],
+ &#x27;TITLE&#x27;: &#x27;Cadastro Unificado API&#x27;,
+ &#x27;VERSION&#x27;: &#x27;1.0.0&#x27;}</pre></td>
+        </tr>
+      
+        <tr>
+          <td>STATICFILES_DIRS</td>
+          <td class="code"><pre>[]</pre></td>
+        </tr>
+      
+        <tr>
+          <td>STATICFILES_FINDERS</td>
+          <td class="code"><pre>[&#x27;django.contrib.staticfiles.finders.FileSystemFinder&#x27;,
+ &#x27;django.contrib.staticfiles.finders.AppDirectoriesFinder&#x27;]</pre></td>
+        </tr>
+      
+        <tr>
+          <td>STATICFILES_STORAGE</td>
+          <td class="code"><pre>&#x27;whitenoise.storage.CompressedManifestStaticFilesStorage&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>STATIC_ROOT</td>
+          <td class="code"><pre>PosixPath(&#x27;/app/static&#x27;)</pre></td>
+        </tr>
+      
+        <tr>
+          <td>STATIC_URL</td>
+          <td class="code"><pre>&#x27;/static/&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>STORAGES</td>
+          <td class="code"><pre>{&#x27;default&#x27;: {&#x27;BACKEND&#x27;: &#x27;django.core.files.storage.FileSystemStorage&#x27;},
+ &#x27;staticfiles&#x27;: {&#x27;BACKEND&#x27;: &#x27;whitenoise.storage.CompressedManifestStaticFilesStorage&#x27;}}</pre></td>
+        </tr>
+      
+        <tr>
+          <td>TEMPLATES</td>
+          <td class="code"><pre>[{&#x27;APP_DIRS&#x27;: True,
+  &#x27;BACKEND&#x27;: &#x27;django.template.backends.django.DjangoTemplates&#x27;,
+  &#x27;DIRS&#x27;: [PosixPath(&#x27;/app/templates&#x27;)],
+  &#x27;OPTIONS&#x27;: {&#x27;context_processors&#x27;: [&#x27;django.template.context_processors.debug&#x27;,
+                                     &#x27;django.template.context_processors.request&#x27;,
+                                     &#x27;django.contrib.auth.context_processors.auth&#x27;,
+                                     &#x27;django.contrib.messages.context_processors.messages&#x27;]}}]</pre></td>
+        </tr>
+      
+        <tr>
+          <td>TEST_NON_SERIALIZED_APPS</td>
+          <td class="code"><pre>[]</pre></td>
+        </tr>
+      
+        <tr>
+          <td>TEST_RUNNER</td>
+          <td class="code"><pre>&#x27;django.test.runner.DiscoverRunner&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>THOUSAND_SEPARATOR</td>
+          <td class="code"><pre>&#x27;,&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>TIME_FORMAT</td>
+          <td class="code"><pre>&#x27;P&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>TIME_INPUT_FORMATS</td>
+          <td class="code"><pre>[&#x27;%H:%M:%S&#x27;, &#x27;%H:%M:%S.%f&#x27;, &#x27;%H:%M&#x27;]</pre></td>
+        </tr>
+      
+        <tr>
+          <td>TIME_ZONE</td>
+          <td class="code"><pre>&#x27;America/Sao_Paulo&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>USE_DEPRECATED_PYTZ</td>
+          <td class="code"><pre>False</pre></td>
+        </tr>
+      
+        <tr>
+          <td>USE_I18N</td>
+          <td class="code"><pre>True</pre></td>
+        </tr>
+      
+        <tr>
+          <td>USE_L10N</td>
+          <td class="code"><pre>True</pre></td>
+        </tr>
+      
+        <tr>
+          <td>USE_THOUSAND_SEPARATOR</td>
+          <td class="code"><pre>False</pre></td>
+        </tr>
+      
+        <tr>
+          <td>USE_TZ</td>
+          <td class="code"><pre>True</pre></td>
+        </tr>
+      
+        <tr>
+          <td>USE_X_FORWARDED_HOST</td>
+          <td class="code"><pre>False</pre></td>
+        </tr>
+      
+        <tr>
+          <td>USE_X_FORWARDED_PORT</td>
+          <td class="code"><pre>False</pre></td>
+        </tr>
+      
+        <tr>
+          <td>WSGI_APPLICATION</td>
+          <td class="code"><pre>&#x27;config.wsgi.application&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>X_FRAME_OPTIONS</td>
+          <td class="code"><pre>&#x27;DENY&#x27;</pre></td>
+        </tr>
+      
+        <tr>
+          <td>YEAR_MONTH_FORMAT</td>
+          <td class="code"><pre>&#x27;F Y&#x27;</pre></td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+</div>
+
+  <div id="explanation">
+    <p>
+      You’re seeing this error because you have <code>DEBUG = True</code> in your
+      Django settings file. Change that to <code>False</code>, and Django will
+      display a standard page generated by the handler for this status code.
+    </p>
+  </div>
+
+</body>
+</html>
+
+=== Correção Concluída! ===
+
+🚀 Teste os seguintes endpoints:
+   - API: http://localhost:8001/api/v1/
+   - Health: http://localhost:8001/api/v1/health/
+   - Docs: http://localhost:8001/api/docs/
+   - Schema: http://localhost:8001/api/schema/
+
+📝 Se ainda houver problemas:
+   1. Verifique os logs: make logs
+   2. Entre no container: make bash
+   3. Teste manualmente: python manage.py spectacular --validate

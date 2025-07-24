@@ -24,7 +24,7 @@ app_name = 'cadastro'
 urlpatterns = [
     # API routes
     path('api/', include(router.urls)),
-    
+
     # URLs específicas para ações customizadas podem ser adicionadas aqui
     # path('api/custom-endpoint/', custom_view, name='custom-endpoint'),
 ]
